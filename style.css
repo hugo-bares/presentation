@@ -131,7 +131,7 @@ header.scrolled .nav-right a {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    background-image: url('images/desk.png');
+    background-image: url('images/desk.jpg');
     background-size: cover;
     background-position: center;
 }
