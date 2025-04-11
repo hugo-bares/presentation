@@ -181,6 +181,28 @@
                 }, 300);
             });
         }
+
+        // Gestion du bouton Voir Plus pour les outils
+        const voirPlusOutils = document.querySelector('.voir-plus-outils');
+        if (voirPlusOutils) {
+            voirPlusOutils.addEventListener('click', function() {
+                const outilsItems = document.querySelectorAll('.outil-item:nth-child(n+5)');
+                
+                if (this.textContent === 'Voir plus') {
+                    // Afficher les outils supplémentaires
+                    outilsItems.forEach(item => {
+                        item.classList.add('visible');
+                    });
+                    this.textContent = 'Voir moins';
+                } else {
+                    // Cacher les outils supplémentaires
+                    outilsItems.forEach(item => {
+                        item.classList.remove('visible');
+                    });
+                    this.textContent = 'Voir plus';
+                }
+            });
+        }
     });
 })();
 
