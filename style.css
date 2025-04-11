@@ -346,12 +346,15 @@ header.scrolled .nav-right a {
 #mobile-menu-toggle {
     display: none;
     position: fixed;
-    top: 20px;
+    top: 50%;
     right: 20px;
+    transform: translateY(-50%);
     z-index: 1001;
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
+    height: 24px;
+    justify-content: center;
 }
 
 #mobile-menu-toggle .bar {
@@ -369,7 +372,10 @@ header.scrolled .nav-right a {
 }
 
 @media (max-width: 768px) {
-    #mobile-menu-toggle { display: flex; }
+    #mobile-menu-toggle { 
+        display: flex;
+        top: 45px;
+    }
     
     header {
         flex-direction: column;
@@ -384,32 +390,49 @@ header.scrolled .nav-right a {
         min-height: 100vh;
     }
 
+    .logo {
+        position: fixed;
+        top: 10px;
+        left: 20px;
+        padding: 0;
+        height: 80px;
+        z-index: 1002;
+    }
+
     .nav-left, .nav-right {
         display: none;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
         width: 100%;
-        margin-top: 30px;
+        margin-top: 100px;
     }
 
     header.mobile-open .nav-left,
     header.mobile-open .nav-right {
         display: flex;
+        margin-top: 0;
+    }
+
+    header.mobile-open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header.mobile-open nav {
+        margin: 0;
+    }
+
+    header.mobile-open .nav-left {
+        margin-top: 100px;
+        margin-bottom: 10px;
     }
 
     .nav-left a, .nav-right a {
         color: var(--text-color);
         font-size: 1.2rem;
-        padding: 10px 20px;
-    }
-
-    .logo {
-        padding: 0 20px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 8px 20px;
+        text-align: center;
     }
 
     .logo img {
@@ -620,25 +643,30 @@ body.dark-mode a {
     }
 }
 
-.download-cv {
+.download-cv, .voir-plus-outils {
     display: inline-block;
-    margin-top: 20px;
+    margin: 20px auto;
     padding: 12px 25px;
-    background-color: #87CEEB;
+    background-color: var(--primary-color);
     color: #ffffff !important;
     text-decoration: none !important;
     border-radius: 25px;
-    transition: all 0.3s ease;
     font-size: 1.1em;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.download-cv:hover {
-    background-color: #6CB4EE;
+.download-cv:hover, .voir-plus-outils:hover {
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    color: #ffffff !important;
-    text-decoration: none !important;
+}
+
+.voir-plus-outils {
+    display: none;
+    width: fit-content;
 }
 
 @media (max-width: 768px) {
@@ -906,10 +934,59 @@ body.dark-mode a {
 }
 
 @media (max-width: 992px) {
-    .outils-grid {
+    .outils-grid, .stats-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 10px;
+    }
+
+    .outil-item:nth-child(n+5) {
+        display: none;
+    }
+    
+    .outil-item.visible {
+        display: flex;
+    }
+    
+    .voir-plus-outils {
+        display: block;
+    }
+    
+    .voyage-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .voyage-text-block, .voyage-photo {
+        flex: 100%;
+        min-width: 100%;
+    }
+    
+    .voyage-content .voyage-photo:nth-last-child(2) {
+        order: 1;
+    }
+    
+    .voyage-content .voyage-text-block:last-child {
+        order: 0;
+    }
+    
+    .stat-item {
+        padding: 15px 10px;
+    }
+    
+    .stat-number {
+        font-size: 1.4em;
+    }
+    
+    .stat-label {
+        font-size: 0.9em;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
     }
 }
 
@@ -1201,7 +1278,42 @@ p, .text, .timeline-title, .timeline-date, .timeline-company {
     }
 
     .stats-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 15px 10px;
+    }
+    
+    .stat-number {
+        font-size: 1.4em;
+    }
+    
+    .stat-label {
+        font-size: 0.9em;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    /* Sélecteur pour cibler l'avant-dernière image (Huayna Potosí) */
+    .voyage-content .voyage-photo:nth-last-child(2) {
+        order: 1;  /* Déplacer après le texte "Et maintenant ?" */
+    }
+    
+    /* Sélecteur pour le dernier bloc de texte (Et maintenant ?) */
+    .voyage-content .voyage-text-block:last-child {
+        order: 0;  /* S'affiche avant l'image Huayna Potosí */
+    }
+    
+    /* S'assurer que le conteneur utilise l'ordre */
+    .voyage-content {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -1214,30 +1326,11 @@ p, .text, .timeline-title, .timeline-date, .timeline-company {
     .voyage-text-block {
         padding: 20px;
     }
-}
 
-/* Suppression des styles pour les boutons voir plus/voir moins */
-.voir-plus-btn,
-.voir-moins-btn {
-    display: none;
-}
-
-/* Suppression de l'effet de flou */
-.voyage-grid::after {
-    display: none;
-}
-
-/* Suppression de la classe reveal-all */
-.voyage-grid.reveal-all {
-    display: grid;
-}
-
-.voyage-grid.reveal-all .voir-moins-btn {
-    display: none;
-}
-
-.voyage-grid.reveal-all .voir-plus-btn {
-    display: none;
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 }
 
 /* Section Langues */
