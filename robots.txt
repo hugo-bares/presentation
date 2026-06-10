@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /CV_Hugo_Bares.pdf
+Sitemap: https://hugobares.fr/sitemap.xml
 
 
 
