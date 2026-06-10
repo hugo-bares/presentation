@@ -132,8 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
             siteParticlesRoot.appendChild(p);
         }
 
-        // Démarre la génération continue (moins fréquente sur mobile)
-        setInterval(spawnParticle, spawnEveryMs);
+        // Démarre la génération avec un délai pour ne pas bloquer le rendu initial
+        setTimeout(() => {
+            setInterval(spawnParticle, spawnEveryMs);
+        }, 800);
     }
 
     function initToolAccordion() {
@@ -214,8 +216,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe sections for scroll animations
-document.querySelectorAll('section').forEach(section => {
+// Observe sections for scroll animations (exclure le hero qui est visible dès le chargement)
+document.querySelectorAll('section:not(.hero)').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
     section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
