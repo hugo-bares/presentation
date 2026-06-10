@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!sphereMenuContainer || !sphereMenu || !menuDropdown) {
         console.warn('Éléments du menu non trouvés');
     } else {
-        let isMenuOpen = false;
         let lastScrollY = 0;
         let ticking = false;
 
@@ -37,14 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fonction pour ouvrir le menu
         function openMenu() {
-            isMenuOpen = true;
             menuDropdown.classList.add('active');
             sphereMenuContainer.classList.add('menu-open');
         }
 
         // Fonction pour fermer le menu
         function closeMenu() {
-            isMenuOpen = false;
             menuDropdown.classList.remove('active');
             sphereMenuContainer.classList.remove('menu-open');
         }
@@ -199,8 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// (Removed duplicate smooth scroll handler; GSAP handler below is used)
-
 // Scroll animations with IntersectionObserver
 const observerOptions = {
     threshold: 0.1,
@@ -244,10 +239,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// ============================================
-// VOYAGE CAROUSEL - Initialisé dans index.html
-// ============================================
 
 // ============================================
 // EXPERIENCES SLIDER
