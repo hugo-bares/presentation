@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /CV_Hugo_Bares.pdf
+
+
+
+
