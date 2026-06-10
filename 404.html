@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>404 - Page non trouvée | Hugo Barès</title>
+    <meta name="description" content="Page non trouvée - Hugo Barès, Chef de Projet Web" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 700;
+            color: var(--color-accent);
+            text-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+            line-height: 1;
+            margin-bottom: var(--spacing-md);
+            font-family: var(--font-mono);
+            letter-spacing: -0.05em;
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .error-message {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--spacing-xl);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .error-link {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--color-accent);
+            color: var(--color-text);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            background: rgba(0, 255, 136, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0, 255, 136, 0.1), transparent);
+            transition: width 0.4s ease;
+            z-index: 0;
+        }
+
+        .error-link:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+            padding-left: 3rem;
+            color: var(--color-accent);
+        }
+
+        .error-link:hover::before {
+            width: 100%;
+        }
+
+        .error-link span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Particules de fond */
+        .error-particles {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .error-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            opacity: 0.6;
+            box-shadow: 0 0 12px rgba(0, 255, 136, 0.8);
+            animation: particleFloat 4s linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translate(var(--dx, 0px), var(--dy, -80px)) scale(0.6);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .error-container {
+                padding: var(--spacing-lg);
+            }
+
+            .error-code {
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .error-message {
+                margin-bottom: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-particles" id="errorParticles"></div>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page non trouvée</h1>
+        <p class="error-message">
+            Désolé, la page que vous recherchez n'existe pas ou a été déplacée. 
+            Retournez à la page d'accueil pour continuer votre navigation.
+        </p>
+        <a href="/" class="error-link">
+            <span>Retour à l'accueil</span>
+        </a>
+    </div>
+
+    <script>
+        // Créer des particules animées
+        function createParticles() {
+            const container = document.getElementById('errorParticles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'error-particle';
+                
+                const size = Math.random() * 3 + 2;
+                const x = Math.random() * 100;
+                const delay = Math.random() * 4;
+                const duration = Math.random() * 3 + 3;
+                const dx = (Math.random() - 0.5) * 100;
+                const dy = -Math.random() * 100 - 50;
+
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = x + '%';
+                particle.style.bottom = '-10px';
+                particle.style.animationDelay = delay + 's';
+                particle.style.animationDuration = duration + 's';
+                particle.style.setProperty('--dx', dx + 'px');
+                particle.style.setProperty('--dy', dy + 'px');
+
+                container.appendChild(particle);
+            }
+        }
+
+        // Initialiser les particules au chargement
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', createParticles);
+        } else {
+            createParticles();
+        }
+    </script>
+</body>
+</html>
+
+
