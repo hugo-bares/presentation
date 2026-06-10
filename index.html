@@ -21,7 +21,27 @@
     <meta name="twitter:description" content="Chef de projet web basé à Paris : CMS | WordPress | Gestion de projet | Marketing Digital | Tour du monde">
     <meta name="twitter:image" content="https://hugobares.fr/images/IMG_2080.webp?v=3">
     <link rel="canonical" href="https://hugobares.fr/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta name="theme-color" content="#0a0a0a">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hugo Barès",
+      "jobTitle": "Chef de Projet Web",
+      "url": "https://hugobares.fr",
+      "email": "hugobares@orange.fr",
+      "telephone": "+33609513303",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/hugobares"
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -30,10 +50,6 @@
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js" defer></script>
-
-    <!-- Locomotive Scroll -->
-    <!-- Locomotive Scroll (4.1.4) -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" defer></script>
 
     <!-- Hammer.js for touch gestures -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" defer></script>
@@ -596,13 +612,13 @@
             <h2 class="section-title">Restons en contact</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <a href="mailto:hugobares@orange.fr" class="contact-email">
+                    <a href="#" class="contact-email" id="contactEmail">
                         <span class="contact-label">Email</span>
-                        <span class="contact-value">hugobares@orange.fr</span>
+                        <span class="contact-value" id="contactEmailValue">chargement...</span>
                     </a>
-                    <a href="tel:+33609513303" class="contact-phone">
+                    <a href="#" class="contact-phone" id="contactPhone">
                         <span class="contact-label">Téléphone</span>
-                        <span class="contact-value">+33 6 09 51 33 03</span>
+                        <span class="contact-value" id="contactPhoneValue">chargement...</span>
                     </a>
                 </div>
                 <div class="contact-links">
@@ -626,6 +642,27 @@
 
     <!-- JavaScript externe -->
     <script src="script.js"></script>
+    <script>
+    // Obfuscation email et téléphone (protection anti-spam)
+    (function() {
+        var u = 'hugobares', d = 'orange.fr';
+        var email = u + '@' + d;
+        var el = document.getElementById('contactEmail');
+        var val = document.getElementById('contactEmailValue');
+        if (el && val) {
+            el.href = 'mailto:' + email;
+            val.textContent = email;
+        }
+        var t = ['+33', '6', '09', '51', '33', '03'].join(' ');
+        var tel = t.replace(/ /g, '').replace('+33 ', '+33');
+        var ph = document.getElementById('contactPhone');
+        var phVal = document.getElementById('contactPhoneValue');
+        if (ph && phVal) {
+            ph.href = 'tel:' + ['+33609513303'].join('');
+            phVal.textContent = t;
+        }
+    })();
+    </script>
     
     <!-- D3.js pour la carte du monde -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
