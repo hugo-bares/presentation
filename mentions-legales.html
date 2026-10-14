@@ -4,55 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Mentions légales | Hugo Barès</title>
-    <meta name="description" content="Mentions légales du site de Hugo Barès, Chef de Projet Web.">
-    <link rel="icon" type="image/webp" href="images/favicon.webp?v=3">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Mentions légales du site de Hugo Barès, chef de projet web & marketing.">
+    <link rel="icon" type="image/webp" href="images/favicon.webp?v=51">
+    <link rel="stylesheet" href="style.css?v=97">
     <style>
-        .legal-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: var(--spacing-xl);
-            line-height: 1.8;
-        }
-        .legal-container h1 {
-            margin-bottom: var(--spacing-md);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .legal-container h2 {
-            margin-top: var(--spacing-lg);
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: 1px;
-        }
-        .legal-container p {
-            margin-bottom: var(--spacing-sm);
-            color: rgba(255,255,255,0.85);
-        }
-        .legal-container a {
-            color: var(--color-accent);
-            text-decoration: none;
-        }
-        .legal-container a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .legal-container {
-                padding: var(--spacing-lg);
-            }
-        }
+        .legal-wrap{max-width:820px;margin:0 auto;padding:clamp(3rem,7vw,6rem) 24px;line-height:1.75;color:var(--ink)}
+        .legal-back{display:inline-flex;align-items:center;gap:.45rem;color:var(--accent);font-family:var(--font-mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2rem;text-decoration:none}
+        .legal-back:hover{text-decoration:underline}
+        .legal-wrap h1{font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:0;line-height:1.1;color:#114d37;font-size:clamp(2rem,5.5vw,3.2rem);margin-bottom:1.6rem}
+        .legal-wrap h2{font-weight:600;font-size:1.15rem;margin:2rem 0 .5rem;color:var(--ink)}
+        .legal-wrap p{margin-bottom:.8rem;color:var(--ink-soft)}
+        .legal-wrap a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+        .legal-wrap a:hover{opacity:.82}
     </style>
 </head>
 <body>
-    <main class="legal-container">
+    <main class="legal-wrap">
+        <a class="legal-back" href="index.html">← Retour à l'accueil</a>
         <h1>Mentions légales</h1>
 
         <h2>Éditeur du site</h2>
         <p>
             Hugo Barès<br>
-            Chef de Projet Web<br>
+            Chef de projet web &amp; marketing<br>
             Contact : <a href="mailto:hugobares@orange.fr">hugobares@orange.fr</a>
         </p>
 
@@ -84,4 +58,3 @@
     </main>
 </body>
 </html>
-

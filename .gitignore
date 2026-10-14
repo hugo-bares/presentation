@@ -24,4 +24,12 @@ package-lock.json
 *.bak
 *.backup
 
+# Captures brutes (sources lourdes non destinées au web)
+screenshot billat ancien site/
+screenshot billat nouveau site/
 
+# Sources des créations (versions web dans images/creations/)
+/creations/
+
+# Config locale Claude Code
+.claude/

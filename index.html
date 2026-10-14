@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Hugo Barès - Chef de Projet Web</title>
-    <meta name="description" content="Chef de projet web basé à Paris : CMS | WordPress | Gestion de projet | Marketing Digital | Tour du monde" />
-    <meta name="keywords" content="Chef de projet web, communication, marketing, site internet, Hugo BARES, Hugo Barès, webmarketing" />
-    <!-- Favicon avec bust de cache -->
-    <link rel="icon" type="image/webp" href="images/favicon.webp?v=3">
-    <link rel="shortcut icon" href="images/favicon.webp?v=3">
-    <link rel="apple-touch-icon" href="images/favicon.webp?v=3">
-    <!-- Open Graph / Twitter pour l’aperçu -->
-    <meta property="og:title" content="Hugo Barès - Chef de Projet Web">
-    <meta property="og:description" content="Chef de projet web basé à Paris : CMS | WordPress | Gestion de projet | Marketing Digital | Tour du monde">
-    <meta property="og:image" content="https://hugobares.fr/images/IMG_2080.webp?v=3">
+    <title>Hugo Barès — Chef de projet web & marketing</title>
+    <meta name="description" content="Hugo Barès, chef de projet web & marketing à Versailles. Refontes de sites, SEO (page 1 Google), CRM & emailing BtoB. Études de cas et résultats mesurables.">
+    <link rel="icon" type="image/webp" href="images/favicon.webp?v=51">
+    <link rel="shortcut icon" href="images/favicon.webp?v=51">
+    <link rel="apple-touch-icon" href="images/favicon.webp?v=51">
+    <meta property="og:title" content="Hugo Barès — Chef de projet web & marketing">
+    <meta property="og:description" content="Refontes de sites, SEO (page 1 Google), CRM & emailing BtoB. Études de cas et résultats mesurables.">
+    <meta property="og:image" content="https://hugobares.fr/images/IMG_2080.webp?v=51">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hugobares.fr/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hugo Barès - Chef de Projet Web">
-    <meta name="twitter:description" content="Chef de projet web basé à Paris : CMS | WordPress | Gestion de projet | Marketing Digital | Tour du monde">
-    <meta name="twitter:image" content="https://hugobares.fr/images/IMG_2080.webp?v=3">
+    <meta name="twitter:title" content="Hugo Barès — Chef de projet web & marketing">
+    <meta name="twitter:description" content="Refontes de sites, SEO (page 1 Google), CRM & emailing BtoB. Résultats mesurables.">
+    <meta name="twitter:image" content="https://hugobares.fr/images/IMG_2080.webp?v=51">
     <link rel="canonical" href="https://hugobares.fr/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#14573f">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Hugo Barès",
-      "jobTitle": "Chef de Projet Web",
+      "jobTitle": "Chef de projet web & marketing",
       "url": "https://hugobares.fr",
       "email": "hugobares@orange.fr",
       "telephone": "+33609513303",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Paris",
+        "addressLocality": "Versailles",
         "addressCountry": "FR"
       },
       "sameAs": [
@@ -42,1441 +39,437 @@
       ]
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- GSAP for smooth animations -->
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js" defer></script>
-
-    <!-- Hammer.js for touch gestures -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" defer></script>
-    
-    
-    <!-- CSS externe -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Tarteaucitron CSS -->
+    <link rel="preload" href="fonts/Gantari-latin.woff2?v=67" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Bodom.woff2?v=66" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css?v=99">
     <link rel="stylesheet" href="tarteaucitron.js-master/css/tarteaucitron.min.css">
 </head>
-<body>
-    <!-- Particules de fond du site -->
-    <div class="site-particles" id="siteParticles" aria-hidden="true"></div>
-    <!-- Sphère Menu -->
-    <div class="sphere-menu-container">
-        <div class="sphere-menu" id="sphereMenu">
-            <div class="sphere-wireframe">
-                <div class="sphere-ring ring-horizontal-1"></div>
-                <div class="sphere-ring ring-horizontal-2"></div>
-                <div class="sphere-ring ring-horizontal-3"></div>
-                <div class="sphere-ring ring-horizontal-4"></div>
-                <div class="sphere-ring ring-vertical-1"></div>
-                <div class="sphere-ring ring-vertical-2"></div>
-                <div class="sphere-ring ring-vertical-3"></div>
-                <div class="sphere-ring ring-vertical-4"></div>
-            </div>
-            <div class="menu-text">MENU</div>
-        </div>
-        <div class="menu-dropdown" id="menuDropdown">
-            <div class="menu-item" id="menuItem1" role="button" tabindex="0">À propos</div>
-            <div class="menu-item" id="menuItem2" role="button" tabindex="0">Expérience</div>
-            <div class="menu-item" id="menuItem3" role="button" tabindex="0">Formation</div>
-            <div class="menu-item" id="menuItem4" role="button" tabindex="0">Compétences</div>
-            <div class="menu-item" id="menuItem5" role="button" tabindex="0">Outils</div>
-            <div class="menu-item" id="menuItem6" role="button" tabindex="0">Voyage</div>
-            <div class="menu-item" id="menuItem7" role="button" tabindex="0">Contact</div>
-        </div>
-    </div>
+<body id="top">
 
-    <!-- Hero Section -->
-    <section class="hero site-content">
-        <div class="hero-logo">Hugo Barès</div>
-        <div class="hero-content">
-            <div class="hero-left">
-                <div class="hero-subtitle fade-in-up">
-                    <span class="status-indicator"></span>
-                    Disponible
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+        <div class="nav-inner site-content">
+            <a href="#top" class="nav-brand" aria-label="Accueil Hugo Barès"><img src="images/logo-hugo.svg?v=51" alt="Hugo Barès" class="nav-logo"></a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#realisations" class="nav-link">Réalisations</a>
+                <a href="#parcours" class="nav-link">Parcours</a>
+                <a href="#apropos" class="nav-link">À propos</a>
+                <a href="#contact" class="nav-cta">Me contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="sr-only">Hugo Barès — Chef de projet web &amp; marketing à Versailles</h1>
+        <!-- 1. HERO — Glyph Portal (reproduction fidèle de la démo) -->
+        <section class="gp" id="heroPortal" data-word="HUGO BARÈS" data-interactive="true" data-weight="400" data-font='"BodoniMutant","Arial Black","Arial",sans-serif' style="--gp-length:1.8;--gp-characters:10">
+            <style>
+                #heroPortal{--gp-paper:#fff;--gp-ink:#0c1212;--gp-field:#0b3b2a;--gp-foreground:#fbfbfa;position:relative;isolation:isolate;container-type:inline-size;background:var(--gp-paper);color:var(--gp-ink);font-family:var(--font-primary)}
+                #heroPortal [data-gp-viewport]{position:absolute;inset:0 auto auto 0;height:100vh;height:100svh;width:0;pointer-events:none;visibility:hidden}
+                #heroPortal [data-gp-pin]{position:relative;height:var(--gp-height,100svh);overflow:clip;isolation:isolate;container-type:size}
+                #heroPortal [data-gp-field]{position:absolute;inset:0;background:var(--gp-field);opacity:0;pointer-events:none}
+                #heroPortal[data-gp-ready] [data-gp-field]{opacity:1}
+                #heroPortal [data-gp-art]{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+                #heroPortal [data-gp-marks]{fill:none;stroke:var(--gp-ink);opacity:.6}
+                #heroPortal [data-gp-choices]{position:absolute;inset:0;visibility:hidden;pointer-events:none}
+                #heroPortal[data-gp-choosing=true] [data-gp-choices]{visibility:visible}
+                #heroPortal [data-gp-letter]{box-sizing:border-box;position:absolute;border:0;padding:0;margin:0;background:transparent;cursor:pointer;pointer-events:auto;touch-action:pan-y}
+                #heroPortal [data-gp-letter]:disabled{pointer-events:none}
+                #heroPortal [data-gp-letter]:focus-visible{outline:2px solid var(--gp-field);outline-offset:5px}
+                #heroPortal [data-gp-touch-picker]{display:none;position:absolute;top:calc(var(--gp-word-bottom,50%) + 42px);left:50%;transform:translateX(-50%);font:12px/1.4 Arial,sans-serif;align-items:center;gap:12px;visibility:hidden}
+                #heroPortal[data-gp-choosing=true] [data-gp-touch-picker]{visibility:visible}
+                #heroPortal [data-gp-select]{min-height:44px;min-width:90px;border:1px solid #d8deda;border-radius:4px;background:var(--gp-paper);color:var(--gp-ink);padding:0 10px;font:inherit}
+                #heroPortal [data-gp-select]:focus-visible{outline:2px solid var(--gp-field);outline-offset:4px}
+                @media(any-pointer:coarse){#heroPortal [data-gp-touch-picker]{display:none}}
+                #heroPortal [data-gp-fallback]{position:absolute;inset:0;display:none;place-items:center;font-size:min(calc(100cqw / var(--gp-characters)),38cqh);line-height:1;color:var(--gp-field)}
+                #heroPortal[data-gp-ready] [data-gp-fallback]{visibility:hidden}
+                #heroPortal [data-gp-caption]{position:absolute;inset:auto 8% 9%;display:flex;align-items:center;justify-content:space-between;gap:1rem;font:12px/1.4 Arial,sans-serif;opacity:var(--gp-caption,1);pointer-events:var(--gp-caption-hit,auto);font-family:inherit}
+                #heroPortal [data-gp-front]{position:absolute;inset:0;opacity:var(--gp-caption,1);pointer-events:none}
+                #heroPortal [data-gp-front] a,#heroPortal [data-gp-front] button{pointer-events:var(--gp-caption-hit,auto)}
+                #heroPortal [data-gp-front]:focus-within{opacity:1}
+                #heroPortal [data-gp-hint]{max-width:30ch;color:var(--gp-ink)}
+                #heroPortal [data-gp-enter]{display:inline-flex;align-items:center;gap:16px;min-height:44px;color:inherit;font:inherit;text-decoration:none;letter-spacing:inherit}
+                #heroPortal [data-gp-enter]:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+                #heroPortal [data-gp-caption]:focus-within{opacity:1;pointer-events:auto}
+                #heroPortal [data-gp-content]{box-sizing:border-box;position:relative;min-height:var(--gp-height,100svh);padding:clamp(32px,7%,100px);display:grid;align-content:center;color:var(--gp-foreground);overflow-wrap:anywhere}
+                #heroPortal[data-gp-motion=on] [data-gp-pin]{position:sticky;top:0}
+                #heroPortal[data-gp-motion=off] [data-gp-hint]{display:none}
+                #heroPortal[data-gp-motion=on] [data-gp-content]{margin-top:calc((var(--gp-length) - 1) * var(--gp-height));opacity:var(--gp-reveal,0);pointer-events:none}
+                #heroPortal[data-gp-motion=on][data-gp-entered=true] [data-gp-content]{pointer-events:auto}
+                #heroPortal[data-gp-motion=on] [data-gp-content]:focus-within{opacity:1;pointer-events:auto}
+                @media(prefers-reduced-motion:reduce){#heroPortal [data-gp-pin]{position:relative!important}#heroPortal [data-gp-content]{margin-top:0!important;opacity:1!important;background:#14573f!important;min-height:0;padding-block:64px}#heroPortal [data-gp-caption]{opacity:1!important}#heroPortal [data-gp-hint]{display:none}}
+
+                /* --- Habillage démo "sublime." --- */
+                #heroPortal [data-gp-caption]{inset:calc(var(--gp-word-bottom,50%) + 82px) 24px auto;justify-content:center}
+                #heroPortal [data-gp-hint]{display:none}
+                #heroPortal [data-gp-enter]{min-height:46px;padding:0 20px;gap:28px;background:#142b22;border:1px solid #10261d;border-radius:10px;color:#fff;font-size:13px;font-weight:500;box-shadow:0 1px 2px #10261d1a;transition:background .18s,box-shadow .18s}
+                #heroPortal [data-gp-enter]:hover{background:#204434;box-shadow:0 3px 8px #10261d18}
+                #heroPortal [data-gp-enter]:focus-visible{outline:2px solid #176247;outline-offset:4px}
+                #heroPortal [data-gp-touch-picker]{top:auto;bottom:18px;left:50%}
+                #heroPortal [data-gp-select]{border-color:transparent;border-radius:8px;font-size:12px;color:#626964}
+                [data-sublime-header]{position:absolute;inset:clamp(24px,4.5cqw,48px) clamp(24px,5cqw,64px) auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+                [data-sublime-logo]{font-size:19px;font-weight:600;letter-spacing:-.065em;color:#18251e}
+                [data-sublime-category]{font-size:12px;line-height:1.5;color:#71766f}
+                [data-sublime-eyebrow]{position:absolute;inset:auto 24px calc(100% - var(--gp-word-top,35%) + 32px);margin:0;text-align:center;font-size:13px;font-weight:400;line-height:1.5;letter-spacing:.005em;color:#71766f}
+                [data-sublime-support]{position:absolute;inset:calc(var(--gp-word-bottom,50%) + 32px) 24px auto;margin:0;text-align:center;font-size:16px;font-weight:400;line-height:1.5;color:#646a63}
+                [data-sublime-scroll]{position:absolute;inset:auto 24px 7%;text-align:center;color:#7c817b;font-size:11px;letter-spacing:.01em}
+                @media(any-pointer:coarse){[data-sublime-scroll]{bottom:13%}}
+                @container(max-width:450px){[data-sublime-category]{max-width:12ch;text-align:right}[data-sublime-eyebrow]{font-size:12px}[data-sublime-support]{font-size:14px}#heroPortal [data-gp-caption]{top:calc(var(--gp-word-bottom,50%) + 76px)}}
+                @container(max-height:479px){[data-sublime-header]{top:18px}[data-sublime-support]{top:calc(var(--gp-word-bottom,50%) + 16px)}#heroPortal [data-gp-caption]{top:calc(var(--gp-word-bottom,50%) + 60px)}[data-sublime-scroll]{display:none}}
+                #heroPortal [data-gp-content]{padding:5.5rem clamp(1.25rem,5cqw,5rem) 6.5rem;font-family:inherit}
+                [data-slipstream-copy]{display:flex;width:min(100%,80rem);margin:auto;flex-direction:column;align-items:flex-start;gap:clamp(2rem,5svh,3.5rem)}
+                [data-slipstream-copy] h2{max-width:48rem;margin:0;color:inherit;font-size:clamp(1.75rem,1.1rem + 2.1cqw,2.25rem);font-weight:400;line-height:1.25;letter-spacing:0;text-wrap:balance}
+                [data-slipstream-features]{display:grid;width:100%;grid-template-columns:1fr;gap:1.75rem}
+                [data-slipstream-feature]{border-top:1px solid rgba(251,251,250,.22);padding-top:1.1rem}
+                [data-slipstream-feature] h3{margin:0;color:inherit;font-size:1.125rem;font-weight:500;line-height:1.2;letter-spacing:0}
+                [data-slipstream-feature] p{margin:.55rem 0 0;color:rgba(251,251,250,.85);font-size:.9375rem;line-height:1.55}
+                [data-slipstream-no]{display:inline-block;margin-right:.7rem;color:rgba(251,251,250,.85);font:500 .75rem 'Gantari',sans-serif;letter-spacing:.08em;transform:translateY(-.1em)}
+                @container(min-width:768px){[data-slipstream-features]{grid-template-columns:repeat(3,minmax(0,1fr));gap:3.5rem}}
+            </style>
+
+            <div data-gp-viewport aria-hidden="true"></div>
+            <div data-gp-pin>
+                <canvas id="heroClouds" class="hero-clouds" aria-hidden="true" data-bottom="#87ceeb" data-mid="#f8f8f8" data-top="#ffffff" data-speed="1"></canvas>
+                <div data-gp-field aria-hidden="true" inert>
+                    <div data-gp-default-field style="position:absolute;inset:0;background:radial-gradient(circle at 18% 8%, rgba(68,125,98,.72), transparent 34%), radial-gradient(circle at 82% 20%, rgba(251,251,250,.12), transparent 28%), radial-gradient(circle at 48% 78%, rgba(9,48,35,.5), transparent 44%), linear-gradient(135deg,#0b3b2a 0%,#14573f 48%,#082d22 100%)"></div>
                 </div>
-                <h1 class="hero-title fade-in-up">
-                    <div class="hero-title-ellipse hero-ellipse-1"></div>
-                    <div class="hero-title-ellipse hero-ellipse-2"></div>
-                    <span class="hero-title-text">Chef de<br>Projet Web</span>
-                </h1>
+                <svg data-gp-art aria-hidden="true" focusable="false">
+                    <defs>
+                        <clipPath id="portalClip" clipPathUnits="userSpaceOnUse">
+                            <text data-gp-glyph x="0" y="0" style="font-family:'BodoniMutant','Arial Black','Arial',sans-serif;font-weight:400;font-size:100px;font-kerning:none;font-variant-ligatures:none;letter-spacing:0">HUGO BARÈS</text>
+                        </clipPath>
+                    </defs>
+                    <g data-gp-marks style="visibility:hidden"><path></path></g>
+                </svg>
+                <div data-gp-choices role="radiogroup" aria-label="Choisir la lettre d'entrée" inert>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="0" aria-label="H, lettre 1 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="1" aria-label="U, lettre 2 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="2" aria-label="G, lettre 3 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="3" aria-label="O, lettre 4 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="4" aria-label="espace, lettre 5 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="5" aria-label="B, lettre 6 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="6" aria-label="A, lettre 7 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="7" aria-label="R, lettre 8 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="8" aria-label="È, lettre 9 sur 10"></button>
+                    <button type="button" role="radio" aria-checked="false" tabindex="-1" data-gp-letter="9" aria-label="S, lettre 10 sur 10"></button>
                 </div>
-            <div class="hero-right">
-                <p class="hero-description fade-in-up">
-                    Passionné par le marketing et le digital, j'ai développé une solide expertise en gestion de projets web et coordination d'équipes. 
-                    Mon parcours enrichi par un tour du monde a renforcé mon autonomie, ma créativité et mon esprit d'équipe.
-                </p>
-                <div class="hero-cta-wrapper">
-                <a href="#contact" class="availability fade-in-up">Me contacter</a>
-                    <div class="scroll-indicator">
-                        <span>Scroll</span>
-                        <div class="scroll-line"></div>
+                <label data-gp-touch-picker><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Entry letter</span><select data-gp-select>
+                    <option value="" disabled selected>Choisir une lettre</option>
+                    <option value="0">1 · H</option>
+                    <option value="1">2 · U</option>
+                    <option value="2">3 · G</option>
+                    <option value="3">4 · O</option>
+                    <option value="4">5 · ␣</option>
+                    <option value="5">6 · B</option>
+                    <option value="6">7 · A</option>
+                    <option value="7">8 · R</option>
+                    <option value="8">9 · È</option>
+                    <option value="9">10 · S</option>
+                </select></label>
+                <div data-gp-front>
+                    <div data-sublime-header><img src="images/logo-hugo.svg?v=51" alt="Hugo Barès" data-sublime-logo class="portal-logo"><span data-sublime-category>Chef de projet web &amp; marketing · Versailles</span></div>
+                    <p data-sublime-eyebrow>Disponible · Versailles</p>
+                    <p data-sublime-support>Je conçois des sites qui se classent, convertissent et durent.</p>
+                    <span data-sublime-scroll>Scroller pour découvrir ↓</span>
+                </div>
+                <span data-gp-fallback aria-hidden="true" style="font-family:'BodoniMutant','Arial Black','Arial',sans-serif;font-weight:400">HUGO BARÈS</span>
+                <div data-gp-caption>
+                    <span data-gp-hint aria-hidden="true">Scroller pour entrer.</span>
+                    <a data-gp-enter href="#heroPortalContent">Entrer<span aria-hidden="true">↘</span></a>
+                </div>
+            </div>
+            <div data-gp-content id="heroPortalContent" tabindex="-1">
+                <div data-slipstream-copy>
+                    <h2>Chef de projet web &amp; marketing. Je relie le business, le design et la technique.</h2>
+                    <div data-slipstream-features>
+                        <div data-slipstream-feature><h3><span data-slipstream-no>01</span>Mon profil</h3><p>3 ans d'expérience : coordination d'équipes (direction, designers, développeurs), refontes de sites, SEO et marketing automation.</p></div>
+                        <div data-slipstream-feature><h3><span data-slipstream-no>02</span>Mon approche</h3><p>Partir du besoin business, cadrer le projet, coordonner design et technique, puis livrer — en gardant la main sur le SEO, le contenu et les visuels.</p></div>
+                        <div data-slipstream-feature><h3><span data-slipstream-no>03</span>Ma différence</h3><p>Autonome et créatif, de la stratégie aux visuels — un état d'esprit forgé par 11 mois de tour du monde (13 pays, 3 continents).</p></div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 3. RÉALISATIONS -->
+        <section class="section" id="realisations" data-reveal>
+            <div class="site-content">
+                <div class="section-head">
+                    <span class="section-eyebrow">01 — Réalisations</span>
+                    <h2 class="section-title">Des projets, des résultats</h2>
+                    <p class="section-intro">Ma démarche et mes résultats, étape par étape.</p>
                 </div>
-            </div>
-        
-        <div class="scroll-indicator scroll-indicator-desktop">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+                <div class="rtl">
+                    <div class="rtl-line"><div class="rtl-progress"></div></div>
 
-    <!-- About Section -->
-    <section class="about-section site-content" id="about">
-        <div class="about-container">
-            <h2 class="section-title">À propos</h2>
-            <div class="about-content about-future">
-                <div class="about-grid">
-                    <div class="about-holo">
-                        <div class="holo-bg"></div>
-                        <div class="holo-header">
-                            <span class="dot dot-green"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="tag">IDENT: HB-01</span>
-                        </div>
-                        <div class="holo-card">
-                            <div class="holo-orb">
-                                <img src="images/IMG_2080.webp" alt="Hugo Barès" class="holo-avatar">
-                                <div class="orb-ring r1"></div>
-                                <div class="orb-ring r2"></div>
-                                <div class="orb-ring r3"></div>
-                                <div class="orb-ring r4"></div>
-                            </div>
-                            <div class="holo-meta">
-                                <div class="meta-line"><span class="k">Nom</span><span class="v">Hugo Barès</span></div>
-                                <div class="meta-line"><span class="k">Rôle</span><span class="v">Chef de Projet Web</span></div>
-                                <div class="meta-line"><span class="k">Stack</span><span class="v">CMS, CRM, SEO, Analytics</span></div>
-                                <div class="meta-line"><span class="k">Status</span><span class="v ok">Disponible</span></div>
-                            </div>
-                        </div>
-                        <div class="scanline"></div>
-                    </div>
-
-                    <div class="about-narrative">
-                        <h3 class="glow-title">Profil</h3>
-                        <p>
-                            Passionné par le <strong>marketing et le digital</strong>, j'ai développé une solide expertise en
-                            gestion de projets web et coordination d'équipes. Mon parcours en <strong>Digital Marketing & Data Analytics</strong>
-                            m'a permis d'acquérir des compétences en CRM, marketing automation et en communication.
-                        </p>
-                        <p class="about-narrative-second">
-                            Curieux et adaptable, mes expériences professionnelles, enrichies par un <strong>tour du monde de 10 mois</strong>,
-                            ont renforcé mon autonomie, ma créativité et mon esprit d'équipe.
-                        </p>
-
-                        <div class="chips">
-                            <span class="chip">Organisation</span>
-                            <span class="chip">Créativité</span>
-                            <span class="chip">Autonomie</span>
-                            <span class="chip">Adaptabilité</span>
-                            <span class="chip">SEO</span>
-                        </div>
-
-                        <div class="about-stats about-stats--tags">
-                            <div class="stat"><div class="n">Marketing digital</div></div>
-                            <div class="stat"><div class="n">Communication</div></div>
-                            <div class="stat"><div class="n">Gestion de projet</div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-grid-veil"></div>
-                <div class="about-particles"><span></span><span></span><span></span><span></span><span></span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Marquee Section -->
-    <div class="marquee-section site-content">
-        <div class="marquee">
-            <div class="marquee-content">
-                <span class="marquee-item">ORGANISATION</span>
-                <span class="marquee-item">CRÉATIVITÉ</span>
-                <span class="marquee-item">AUTONOMIE</span>
-                <span class="marquee-item">ADAPTABILITÉ</span>
-                <span class="marquee-item">ESPRIT D'ÉQUIPE</span>
-                <span class="marquee-item">SÉRIEUX</span>
-            </div>
-            <div class="marquee-content" aria-hidden="true">
-                <span class="marquee-item">ORGANISATION</span>
-                <span class="marquee-item">CRÉATIVITÉ</span>
-                <span class="marquee-item">AUTONOMIE</span>
-                <span class="marquee-item">ADAPTABILITÉ</span>
-                <span class="marquee-item">ESPRIT D'ÉQUIPE</span>
-                <span class="marquee-item">SÉRIEUX</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Expériences Section -->
-    <section class="experiences-section site-content" id="experiences">
-        <div class="experiences-container">
-            <h2 class="section-title">Expériences</h2>
-            
-            <div class="experiences-slider-wrapper">
-                <div class="experiences-slider">
-                    <!-- Expérience 1: Chef de projet Web -->
-                    <div class="exp-box exp-box1">
-                        <div class="exp-bg"></div>
-                        <div class="exp-details">
-                            <div class="exp-date">
-                                <span class="date-text">Depuis Mars 2025</span>
-                                <span class="status-badge current">En poste</span>
-                            </div>
-                            <h3 class="exp-title">Chef de projet Web</h3>
-                            <div class="exp-company">Groupe Baho</div>
-                            <div class="exp-location">Les Alluets le roi, France</div>
-                            <div class="exp-tasks">
-                                <h4>Missions principales :</h4>
-                                <ul>
-                                    <li>Migration du site et de la base de données de Socoplast</li>
-                                    <li>Mise à jour et optimisation des sites web existants</li>
-                                    <li>Actualisation du catalogue produits (CMS)</li>
-                                    <li>Réalisation de supports marketing (Canva)</li>
-                                    <li>Prises de vue et retouches de photographies produit</li>
-                                    <li>Analyse de données (campagnes / sites)</li>
-                                    <li>Animation LinkedIn</li>
-                                </ul>
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">Refonte de site</h3></div>
+                        <div class="rtl-content">
+                            <p>Refonte <strong>100 %</strong> du site e-commerce B2B de Billat : nouveau design, performance, responsive et sécurité HTTPS — <strong>page 1 de Google dès le lancement</strong>.</p>
+                            <p class="preview-hint">Survolez un aperçu pour le faire défiler.</p>
+                            <div class="preview-duo">
+                                <figure class="site-preview"><span class="preview-label preview-label--before">Avant</span><div class="preview-frame"><img src="images/projets/accueil_old.webp" alt="Accueil avant refonte" loading="lazy"></div></figure>
+                                <figure class="site-preview"><span class="preview-label preview-label--after">Après</span><div class="preview-frame"><img src="images/projets/accueil_new.webp" alt="Accueil après refonte" loading="lazy"></div></figure>
                             </div>
                         </div>
-                        <div class="exp-illustration">
-                            <div class="exp-inner"></div>
+                    </div>
+
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">Back-office sur mesure</h3></div>
+                        <div class="rtl-content">
+                            <p>Développement d'un <strong>back-office dédié</strong> : l'équipe gère le contenu (catalogue, catégories, actualités, bandeaux, pop-ups) en toute autonomie, sans compétence technique.</p>
+                            <div class="bo-shot"><button class="crea-thumb" data-full="images/projets/bo-billat.webp"><img src="images/projets/bo-billat.webp" alt="Back-office sur mesure de Billat.com" loading="lazy"></button></div>
                         </div>
                     </div>
 
-                    <!-- Expérience 2: Chargé de Webmarketing -->
-                    <div class="exp-box exp-box2">
-                        <div class="exp-bg"></div>
-                        <div class="exp-details">
-                            <div class="exp-date">
-                                <span class="date-text">Oct. 2021 - Sept. 2023</span>
-                                <span class="status-badge">Alternance</span>
-                            </div>
-                            <h3 class="exp-title">Chargé de Webmarketing</h3>
-                            <div class="exp-company">Méta-Coaching</div>
-                            <div class="exp-location">Paris, France</div>
-                            <div class="exp-tasks">
-                                <h4>Missions principales :</h4>
-                                <ul>
-                                    <li>Refonte complète des sites web</li>
-                                    <li>Coordination des équipes projet web</li>
-                                    <li>Conception des visuels web</li>
-                                    <li>Marketing automation et gestion des retours clients (CRM)</li>
-                                    <li>Rédaction de contenu web (CMS)</li>
-                                    <li>Gestion des recettes</li>
-                                    <li>Formation des nouveaux employés</li>
-                                    <li>Optimisation SEO</li>
-                                </ul>
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">SEO</h3></div>
+                        <div class="rtl-content">
+                            <p>Référencement naturel piloté sur 6 sites du groupe : base technique saine, on-page, maillage et suivi de performance. <strong>3 sites passés en page 1 de Google.</strong></p>
+                            <div class="about-stats">
+                                <div class="stat"><div class="n">×7</div><div class="l">clics organiques</div></div>
+                                <div class="stat"><div class="n">+260 000</div><div class="l">impressions gagnées</div></div>
+                                <div class="stat"><div class="n">8.4</div><div class="l">position moy. (Billat)</div></div>
+                                <div class="stat"><div class="n">Page 1</div><div class="l">dès le lancement</div></div>
                             </div>
                         </div>
-                        <div class="exp-illustration">
-                            <div class="exp-inner"></div>
-                        </div>
                     </div>
 
-                    <!-- Expérience 3: Chef de produit junior -->
-                    <div class="exp-box exp-box3">
-                        <div class="exp-bg"></div>
-                        <div class="exp-details">
-                            <div class="exp-date">
-                                <span class="date-text">Avril 2021 - Juillet 2021</span>
-                                <span class="status-badge">Stage</span>
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">Design graphique</h3></div>
+                        <div class="rtl-content">
+                            <p>Catalogues, présentations et packagings pour la marque Billat — de la conception à la retouche.</p>
+                            <div class="crea-cat">
+                                <div class="crea-cat-label">Catalogue 2026</div>
+                                <div class="crea-grid crea-grid--portrait">
+                                    <button class="crea-thumb" data-full="images/creations/catalogue-1.webp"><img src="images/creations/catalogue-1.webp" alt="Catalogue Billat — couverture" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/catalogue-2.webp"><img src="images/creations/catalogue-2.webp" alt="Catalogue Billat — page 2" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/catalogue-3.webp"><img src="images/creations/catalogue-3.webp" alt="Catalogue Billat — page 3" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/catalogue-4.webp"><img src="images/creations/catalogue-4.webp" alt="Catalogue Billat — page 4" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/catalogue-5.webp"><img src="images/creations/catalogue-5.webp" alt="Catalogue Billat — page 5" loading="lazy"></button>
+                                </div>
+                                <p class="crea-credit">Design réalisé avec une graphiste partenaire — mon rôle : brief, coordination et propositions d'améliorations.</p>
                             </div>
-                            <h3 class="exp-title">Chef de produit junior</h3>
-                            <div class="exp-company">EWS BV</div>
-                            <div class="exp-location">Geldrop, Pays-Bas</div>
-                            <div class="exp-tasks">
-                                <h4>Missions principales :</h4>
-                                <ul>
-                                    <li>Étude, achats et négociation de marchandises</li>
-                                    <li>Gestion de l'acheminement des produits et référencement</li>
-                                    <li>Gestion des stocks et suivi des ventes en ligne</li>
-                                    <li>Traitement des retours clients</li>
-                                    <li>Création d'un partenariat E-commerce sur le marché Français</li>
-                                </ul>
+                            <div class="crea-cat">
+                                <div class="crea-cat-label">Présentation commerciale</div>
+                                <div class="crea-grid crea-grid--landscape">
+                                    <button class="crea-thumb" data-full="images/creations/presentation-1.webp"><img src="images/creations/presentation-1.webp" alt="Présentation Billat — slide 1" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/presentation-2.webp"><img src="images/creations/presentation-2.webp" alt="Présentation Billat — slide 2" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/presentation-3.webp"><img src="images/creations/presentation-3.webp" alt="Présentation Billat — slide 3" loading="lazy"></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="exp-illustration">
-                            <div class="exp-inner"></div>
-                        </div>
-                    </div>
-
-                    <!-- Expérience 4: Employé Polyvalent -->
-                    <div class="exp-box exp-box4">
-                        <div class="exp-bg"></div>
-                        <div class="exp-details">
-                            <div class="exp-date">
-                                <span class="date-text">Mai 2019 - Juin 2019</span>
-                                <span class="status-badge">Stage</span>
-                            </div>
-                            <h3 class="exp-title">Employé Polyvalent</h3>
-                            <div class="exp-company">Go Sport</div>
-                            <div class="exp-location">Orgeval, France</div>
-                            <div class="exp-tasks">
-                                <h4>Missions principales :</h4>
-                                <ul>
-                                    <li>Merchandising</li>
-                                    <li>Conseil client</li>
-                                    <li>Mise en rayon et gestion de l'espace de vente</li>
-                                    <li>Réception de la marchandise</li>
-                                </ul>
+                            <div class="crea-cat">
+                                <div class="crea-cat-label">Packaging</div>
+                                <div class="crea-grid crea-grid--portrait">
+                                    <button class="crea-thumb" data-full="images/creations/packaging-recto.webp"><img src="images/creations/packaging-recto.webp" alt="Packaging Billat — recto" loading="lazy"></button>
+                                    <button class="crea-thumb" data-full="images/creations/packaging-verso.webp"><img src="images/creations/packaging-verso.webp" alt="Packaging Billat — verso" loading="lazy"></button>
+                                </div>
                             </div>
                         </div>
-                        <div class="exp-illustration">
-                            <div class="exp-inner"></div>
+                    </div>
+
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">Photographie produit</h3></div>
+                        <div class="rtl-content">
+                            <p>Prises de vue et retouches — studio et mise en situation.</p>
+                            <div class="crea-grid crea-grid--square">
+                                <button class="crea-thumb" data-full="images/creations/produit-1.webp"><img src="images/creations/produit-1.webp" alt="Photographie produit 1 — studio" loading="lazy"></button>
+                                <button class="crea-thumb" data-full="images/creations/produit-1-situ.webp"><img src="images/creations/produit-1-situ.webp" alt="Photographie produit 1 — en situation" loading="lazy"></button>
+                                <button class="crea-thumb" data-full="images/creations/produit-2.webp"><img src="images/creations/produit-2.webp" alt="Photographie produit 2 — studio" loading="lazy"></button>
+                                <button class="crea-thumb" data-full="images/creations/produit-2-situ.webp"><img src="images/creations/produit-2-situ.webp" alt="Photographie produit 2 — en situation" loading="lazy"></button>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">Emailing / CRM</h3></div>
+                        <div class="rtl-content">
+                            <p>Campagnes emailing BtoB du groupe sur <strong>Brevo</strong> : catalogues (FR / ANG), salons (Automechanika Frankfurt), actualités. Bases segmentées, ciblage multilingue.</p>
+                            <div class="about-stats">
+                                <div class="stat"><div class="n">35</div><div class="l">campagnes bilingues FR/EN</div></div>
+                                <div class="stat"><div class="n">7,6 %</div><div class="l">clic (lancements catalogues)</div></div>
+                                <div class="stat"><div class="n">3</div><div class="l">marques BtoB</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rtl-item">
+                        <div class="rtl-side"><div class="rtl-dot"><span></span></div><h3 class="rtl-title">Approche &amp; outils</h3></div>
+                        <div class="rtl-content">
+                            <p>Optimisation on-page, technique (responsive, vitesse, HTTPS), suivi de performance et migration autonome de 6 sites vers un nouvel hébergement.</p>
+                            <div class="chips">
+                                <span class="chip">Screaming Frog</span>
+                                <span class="chip">Google Search Console</span>
+                                <span class="chip">Brevo</span>
+                                <span class="chip">Emailing BtoB</span>
+                                <span class="chip">WordPress</span>
+                                <span class="chip">Site custom</span>
+                                <span class="chip">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PARCOURS -->
+        <section class="section" id="parcours" data-reveal>
+            <div class="site-content">
+                <div class="section-head">
+                    <span class="section-eyebrow">02 — Parcours</span>
+                    <h2 class="section-title">Expériences &amp; formation</h2>
+                </div>
+                <div class="cab3d-wrap" id="parcoursCabinet">
+                    <div class="cab3d-scene">
+                        <div class="cab3d">
+                            <span class="cab3d-face cab-back"></span>
+                            <span class="cab3d-face cab-left"></span>
+                            <span class="cab3d-face cab-right"></span>
+                            <span class="cab3d-face cab-top"></span>
+                            <span class="cab3d-face cab-bottom"></span>
+                        <button type="button" class="cab-drawer" data-i="0" style="--oy:-96px" aria-controls="cabPanel" aria-expanded="true" aria-label="Chef de projet web/marketing">
+                            <span class="cab-dr-face cab-dr-top"><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span></span>
+                            <span class="cab-dr-face cab-dr-left"></span>
+                            <span class="cab-dr-face cab-dr-right"></span>
+                            <span class="cab-dr-face cab-dr-bottom"></span>
+                            <span class="cab-dr-face cab-dr-front"><span class="cab-dr-label">Chef de projet web/marketing</span><span class="cab-dr-handle" aria-hidden="true"></span></span>
+                        </button>
+                        <button type="button" class="cab-drawer" data-i="1" style="--oy:0px" aria-controls="cabPanel" aria-expanded="false" aria-label="Chargé de webmarketing">
+                            <span class="cab-dr-face cab-dr-top"><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span></span>
+                            <span class="cab-dr-face cab-dr-left"></span>
+                            <span class="cab-dr-face cab-dr-right"></span>
+                            <span class="cab-dr-face cab-dr-bottom"></span>
+                            <span class="cab-dr-face cab-dr-front"><span class="cab-dr-label">Chargé de webmarketing</span><span class="cab-dr-handle" aria-hidden="true"></span></span>
+                        </button>
+                        <button type="button" class="cab-drawer" data-i="2" style="--oy:96px" aria-controls="cabPanel" aria-expanded="false" aria-label="Chef de produit junior">
+                            <span class="cab-dr-face cab-dr-top"><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span><span class="dr-file"></span></span>
+                            <span class="cab-dr-face cab-dr-left"></span>
+                            <span class="cab-dr-face cab-dr-right"></span>
+                            <span class="cab-dr-face cab-dr-bottom"></span>
+                            <span class="cab-dr-face cab-dr-front"><span class="cab-dr-label">Chef de produit junior</span><span class="cab-dr-handle" aria-hidden="true"></span></span>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="cab3d-panel" id="cabPanel" aria-live="polite">
+                        <p class="p-date">Depuis mars 2025 · En poste</p>
+                        <h3 class="p-role">Chef de projet web/marketing</h3>
+                        <p class="p-company">Groupe Baho · Les Alluets-le-Roi</p>
+                        <ul>
+                            <li>Refonte complète de billat.com (design, performance, SEO, sécurité) + back-office sur mesure</li>
+                            <li>Pilotage du SEO et de 35 campagnes emailing bilingues FR/EN pour 3 marques BtoB (Billat, Plastic Billat, Socoplast)</li>
+                            <li>Migration et hébergement autonome de l'ensemble des sites (O2Switch)</li>
+                            <li>Supports marketing, coordination de 70 packagings, photo produit, salon Automechanika Frankfurt 2026</li>
+                            <li>Gestion des fiches produits sur le PIM de Feu Vert</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Trail indicators -->
-                <div class="exp-trail">
-                    <div class="exp-trail-item exp-box1 active">1</div>
-                    <div class="exp-trail-item exp-box2">2</div>
-                    <div class="exp-trail-item exp-box3">3</div>
-                    <div class="exp-trail-item exp-box4">4</div>
+                <div class="formation-row">
+                    <span class="formation-row-label">Formation</span>
+                    <div class="formation-chips">
+                        <div class="formation-chip"><strong>Master Digital Marketing &amp; Data Analytics</strong><span>EMLV — Paris La Défense · 2018-2023</span></div>
+                        <div class="formation-chip"><strong>TOEIC 860/990</strong><span>Anglais B2 · 2022</span></div>
+                        <div class="formation-chip"><strong>Semestre international</strong><span>Dorset College, Dublin · 2020</span></div>
+                        <div class="formation-chip"><strong>Espagnol B1</strong><span>Niveau intermédiaire</span></div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Navigation arrows -->
-                <div class="exp-nav-buttons">
-                    <button class="exp-prev" aria-label="Précédent">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <button class="exp-next" aria-label="Suivant">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+        <!-- 6. À PROPOS (+ voyage) -->
+        <section class="section section--alt" id="apropos" data-reveal>
+            <div class="site-content">
+                <div class="section-head">
+                    <span class="section-eyebrow">03 — À propos</span>
+                    <h2 class="section-title">Au-delà du CV</h2>
+                </div>
+                <div class="about">
+                    <div class="about-text">
+                        <p class="about-lead">Curieux et adaptable, j'aime autant structurer un projet que créer les visuels qui vont avec.</p>
+                        <p>Après mes études, je suis parti <strong>11 mois en sac à dos</strong> : 13 pays, 3 continents, de l'Asie à l'Océanie et l'Amérique du Sud. Un projet qui a renforcé mon autonomie, ma créativité et mon goût du concret — des qualités que je remets chaque jour au service de mes projets web.</p>
+                        <div class="about-travel-stats">
+                            <div class="stat"><div class="n">13</div><div class="l">pays</div></div>
+                            <div class="stat"><div class="n">3</div><div class="l">continents</div></div>
+                            <div class="stat"><div class="n">11</div><div class="l">mois</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="globe-wrap">
+                    <p class="globe-instruction">Mon tour du monde — survole ou touche un pays pour voir la photo</p>
+                    <div class="globe" id="voyageGlobe" aria-label="Carte interactive de mes voyages — 13 pays"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Formation Section -->
-    <section class="formation-section site-content" id="formation">
-        <div class="formation-container">
-            <h2 class="section-title">Formation</h2>
-            <div class="formation-grid">
-                <div class="formation-item">
-                    <div class="formation-bg"></div>
-                    <div class="formation-content">
-                        <div class="formation-date">2018-2023</div>
-                        <h3 class="formation-title">Master Digital Marketing</h3>
-                        <div class="formation-school">EMLV & IIM</div>
-                        <div class="formation-specialty">Data Analytics</div>
-                    </div>
-                    <div class="formation-icon">
-                        <div class="formation-icon-inner"></div>
-                    </div>
+        <!-- 7. CONTACT -->
+        <section class="section" id="contact" data-reveal>
+            <canvas id="contactClouds" class="section-clouds" data-bottom="#9fd0f0" data-mid="#e6f3fb" data-top="#ffffff" data-speed="0.55" aria-hidden="true"></canvas>
+            <div class="site-content">
+                <div class="section-head">
+                    <span class="section-eyebrow">04 — Contact</span>
+                    <h2 class="section-title">Travaillons ensemble</h2>
+                    <p class="section-intro">Disponible pour un poste en gestion de projet web / marketing. Écrivez-moi, je réponds vite.</p>
                 </div>
-                <div class="formation-item">
-                    <div class="formation-bg"></div>
-                    <div class="formation-content">
-                        <div class="formation-date">Sept - Déc 2020</div>
-                        <h3 class="formation-title">Semestre International</h3>
-                        <div class="formation-school">Dorset College Dublin</div>
-                        <div class="formation-specialty">Échange universitaire</div>
-                    </div>
-                    <div class="formation-icon">
-                        <div class="formation-icon-inner"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compétences Section -->
-    <section class="competences-section site-content" id="competences">
-        <div class="competences-container">
-            <h2 class="section-title">Compétences</h2>
-            <div class="competences-list">
-                <div class="competence-item">
-                    <div class="competence-content">
-                        <div class="competence-number">01</div>
-                        <div class="competence-text">
-                            <h3 class="competence-title">Gestion de Projet Web</h3>
-                            <p class="competence-description">Coordination d'équipes, refonte de sites web, migration de bases de données et pilotage de projets digitaux.</p>
-                        </div>
-                        <div class="competence-indicator"></div>
-                    </div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-content">
-                        <div class="competence-number">02</div>
-                        <div class="competence-text">
-                            <h3 class="competence-title">CRM & Marketing Automation</h3>
-                            <p class="competence-description">Gestion de campagnes e-mails, retours clients, marketing automation avec Brevo et newsletters.</p>
-                        </div>
-                        <div class="competence-indicator"></div>
-                    </div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-content">
-                        <div class="competence-number">03</div>
-                        <div class="competence-text">
-                            <h3 class="competence-title">UX/UI & Design</h3>
-                            <p class="competence-description">Conception de visuels web avec Figma, création de supports marketing et optimisation de l'expérience utilisateur.</p>
-                        </div>
-                        <div class="competence-indicator"></div>
-                    </div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-content">
-                        <div class="competence-number">04</div>
-                        <div class="competence-text">
-                            <h3 class="competence-title">SEO & Analytics</h3>
-                            <p class="competence-description">Optimisation SEO, analyse de données de campagnes et sites, gestion de contenu CMS (WordPress/Drupal).</p>
-                        </div>
-                        <div class="competence-indicator"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Outils Section -->
-    <section class="tools-section site-content" id="outils">
-        <div class="tools-container">
-            <h2 class="section-title">Outils</h2>
-            <div class="tools-categories">
-                <!-- Catégorie Design -->
-                <div class="tool-category" data-category="design">
-                    <div class="category-header" role="button" tabindex="0" aria-expanded="false">
-                        <div class="category-label">Design</div>
-                        <div class="category-line"></div>
-                        <div class="category-indicator" aria-hidden="true"></div>
-                    </div>
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <div class="tool-name">Figma</div>
-                            <div class="tool-desc">Conception visuelle</div>
-                        </div>
-                        <div class="tool-item">
-                            <div class="tool-name">Photoshop</div>
-                            <div class="tool-desc">Retouche d'images</div>
-                        </div>
-                        <div class="tool-item">
-                            <div class="tool-name">Canva</div>
-                            <div class="tool-desc">Création graphique</div>
-                        </div>
-                        <div class="tool-item">
-                            <div class="tool-name">Illustrator</div>
-                            <div class="tool-desc">Création vectorielle</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Catégorie Web -->
-                <div class="tool-category" data-category="web">
-                    <div class="category-header" role="button" tabindex="0" aria-expanded="false">
-                        <div class="category-label">Web</div>
-                        <div class="category-line"></div>
-                        <div class="category-indicator" aria-hidden="true"></div>
-                    </div>
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <div class="tool-name">CMS</div>
-                            <div class="tool-desc">WordPress / Drupal</div>
-                        </div>
-                        <div class="tool-item">
-                            <div class="tool-name">SEO</div>
-                            <div class="tool-desc">Screaming Frog</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Catégorie Marketing -->
-                <div class="tool-category" data-category="marketing">
-                    <div class="category-header" role="button" tabindex="0" aria-expanded="false">
-                        <div class="category-label">Marketing</div>
-                        <div class="category-line"></div>
-                        <div class="category-indicator" aria-hidden="true"></div>
-                    </div>
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <div class="tool-name">CRM</div>
-                            <div class="tool-desc">Brevo</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Catégorie Gestion -->
-                <div class="tool-category" data-category="gestion">
-                    <div class="category-header" role="button" tabindex="0" aria-expanded="false">
-                        <div class="category-label">Gestion</div>
-                        <div class="category-line"></div>
-                        <div class="category-indicator" aria-hidden="true"></div>
-                    </div>
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <div class="tool-name">Pack Office</div>
-                            <div class="tool-desc">Productivité</div>
-                        </div>
-                        <div class="tool-item">
-                            <div class="tool-name">Redmine</div>
-                            <div class="tool-desc">Suivi de projet</div>
-                        </div>
-                        <div class="tool-item">
-                            <div class="tool-name">Trello</div>
-                            <div class="tool-desc">Gestion de tâches</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Voyage Section -->
-    <section class="voyage-section site-content" id="voyage">
-        <div class="voyage-container">
-            <h2 class="section-title">Voyage</h2>
-            
-            <!-- Texte d'introduction -->
-            <div class="voyage-intro-text">
-                <p>Après mes études, j'ai décidé de partir en voyage pendant 10 mois. Mon projet ? Découvrir de nouvelles cultures, sortir de ma zone de confort, explorer de magnifiques paysages et me dépasser à travers des treks inoubliables.</p>
-                </div>
-            
-            <!-- Statistiques -->
-            <div class="about-stats">
-                <div class="stat"><div class="n">13</div><div class="l">Pays visités</div></div>
-                <div class="stat"><div class="n">93 637</div><div class="l">Kilomètres</div></div>
-                <div class="stat"><div class="n">3</div><div class="l">Continents</div></div>
-                <div class="stat"><div class="n">5 000</div><div class="l">Photos</div></div>
-                </div>
-            
-            <div class="worldmap-container">
-                <p class="worldmap-instruction">
-                    <span class="instruction-desktop">Survolez les pays visités pour découvrir les photos</span>
-                    <span class="instruction-mobile">Cliquez sur les pays visités pour découvrir les photos</span>
-                </p>
-                <div class="worldmap-wrapper">
-                    <!-- Tooltip pour les pays visités (desktop) -->
-                    <div id="countryTooltip" class="country-tooltip">
-                        <button class="tooltip-close" aria-label="Fermer">×</button>
-                        <div class="tooltip-image-wrapper">
-                            <img class="tooltip-image" src="" alt="" />
-            </div>
-                        <div class="tooltip-name"></div>
-        </div>
-                    
-                    <svg class="worldmap" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" id="worldMapSVG" style="max-width: 100%; height: auto;">
-                        <defs>
-                            <pattern id="grid" width="50" height="23" patternUnits="userSpaceOnUse">
-                                <path d="M 50 0 L 0 0 0 23" fill="none" stroke="rgba(0, 255, 136, 0.08)" stroke-width="0.4"/>
-                            </pattern>
-                            <style>
-                                .country {
-                                    fill: none;
-                                    stroke: rgba(0, 255, 136, 0.4);
-                                    stroke-width: 1;
-                                    transition: all 0.4s ease;
-                                    opacity: 0.7;
-                                }
-                                .country-visited {
-                                    fill: rgba(0, 255, 136, 0.2);
-                                    stroke: var(--color-accent);
-                                    stroke-width: 2;
-                                    opacity: 1;
-                                }
-                                .country-visited:hover {
-                                    fill: rgba(0, 255, 136, 0.35);
-                                    stroke-width: 2.5;
-                                    filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.7));
-                                }
-                            </style>
-                        </defs>
-                        <!-- La carte sera générée par JavaScript -->
-                    </svg>
-            </div>
-                <!-- Tooltip mobile (en dessous de la carte) -->
-                <div id="countryTooltipMobile" class="country-tooltip-mobile">
-                    <div class="tooltip-image-wrapper">
-                        <img class="tooltip-image" src="" alt="" />
-                    </div>
-                    <div class="tooltip-name"></div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section site-content" id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">Restons en contact</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="#" class="contact-email" id="contactEmail">
+                <div class="contact-grid">
+                    <a href="#" class="contact-item" id="contactEmail">
                         <span class="contact-label">Email</span>
-                        <span class="contact-value" id="contactEmailValue">chargement...</span>
+                        <span class="contact-value" id="contactEmailValue">chargement…</span>
                     </a>
-                    <a href="#" class="contact-phone" id="contactPhone">
+                    <a href="#" class="contact-item" id="contactPhone">
                         <span class="contact-label">Téléphone</span>
-                        <span class="contact-value" id="contactPhoneValue">chargement...</span>
+                        <span class="contact-value" id="contactPhoneValue">chargement…</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hugobares" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">/in/hugobares</span>
+                    </a>
+                    <a href="CV_Hugo_Bares.pdf" download="CV_Hugo_Bares.pdf" class="contact-item">
+                        <span class="contact-label">CV</span>
+                        <span class="contact-value">Télécharger (PDF)</span>
                     </a>
                 </div>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/hugobares" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <span class="link-text">LinkedIn</span>
-                        <div class="link-line"></div>
-                    </a>
-                    <a href="CV_Hugo_Bares.pdf" download="CV_Hugo_Bares.pdf" class="contact-link">
-                        <span class="link-text">Télécharger CV</span>
-                        <div class="link-line"></div>
-                    </a>
-                </div>
+                <footer class="contact-footer">
+                    <p>&copy; 2026 Hugo Barès — Tous droits réservés</p>
+                    <p class="footer-links"><a href="mentions-legales.html">Mentions légales</a></p>
+                </footer>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="site-content">
-        <p>&copy; 2026 Hugo Barès — Tous droits réservés</p>
-    </footer>
+    <!-- Scripts -->
+    <!-- Lightbox (agrandissement des visuels) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie" hidden>
+        <button class="lightbox-close" aria-label="Fermer">×</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Précédent">‹</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <button class="lightbox-nav lightbox-next" aria-label="Suivant">›</button>
+    </div>
 
-    <!-- JavaScript externe -->
-    <script src="script.js" defer></script>
+    <script src="script.js?v=65" defer></script>
+    <script src="glyph-portal.js?v=52" defer></script>
     <script>
-    // Obfuscation email et téléphone (protection anti-spam)
-    (function() {
-        var u = 'hugobares', d = 'orange.fr';
-        var email = u + '@' + d;
+    // Obfuscation email / téléphone (anti-spam)
+    (function () {
+        var email = 'hugobares' + '@' + 'orange.fr';
         var el = document.getElementById('contactEmail');
         var val = document.getElementById('contactEmailValue');
-        if (el && val) {
-            el.href = 'mailto:' + email;
-            val.textContent = email;
-        }
+        if (el && val) { el.href = 'mailto:' + email; val.textContent = email; }
         var t = ['+33', '6', '09', '51', '33', '03'].join(' ');
-        var tel = t.replace(/ /g, '').replace('+33 ', '+33');
         var ph = document.getElementById('contactPhone');
         var phVal = document.getElementById('contactPhoneValue');
-        if (ph && phVal) {
-            ph.href = 'tel:' + ['+33609513303'].join('');
-            phVal.textContent = t;
-        }
+        if (ph && phVal) { ph.href = 'tel:+33609513303'; phVal.textContent = t; }
     })();
     </script>
-    
-    <!-- D3.js pour la carte du monde -->
-    <script src="https://d3js.org/d3.v7.min.js" defer></script>
-    <script src="https://unpkg.com/topojson@3" defer></script>
-    
-    <!-- Script pour charger la carte du monde -->
-    <script>
-        // Liste stricte des noms de pays visités (tous les noms possibles dans les données)
-        const visitedCountryNamesStrict = [
-            'India', 'Inde', 'IND',
-            'Nepal', 'Népal', 'NPL',
-            'Thailand', 'Thaïlande', 'THA',
-            'Laos', 'LAO',
-            'Cambodia', 'Cambodge', 'KHM',
-            'Vietnam', 'VIETNAM', 'VNM',
-            'Indonesia', 'Indonésie', 'IDN',
-            'Singapore', 'Singapour', 'SGP',
-            'Australia', 'Australie', 'AUS',
-            'New Zealand', 'Nouvelle-Zélande', 'NZL',
-            'Peru', 'Pérou', 'PER',
-            'Colombia', 'Colombie', 'COL',
-            'Bolivia', 'Bolivie', 'BOL'
-        ];
-        
-        // Mapping des pays visités avec leurs images et noms en français
-        const countryData = {
-            'India': { name: 'Inde', image: 'images/voyage/inde.webp' },
-            'Inde': { name: 'Inde', image: 'images/voyage/inde.webp' },
-            'Nepal': { name: 'Népal', image: 'images/voyage/nepal.webp' },
-            'Népal': { name: 'Népal', image: 'images/voyage/nepal.webp' },
-            'Thailand': { name: 'Thaïlande', image: 'images/voyage/thailande.webp' },
-            'Thaïlande': { name: 'Thaïlande', image: 'images/voyage/thailande.webp' },
-            'Laos': { name: 'Laos', image: 'images/voyage/laos.webp' },
-            'Cambodia': { name: 'Cambodge', image: 'images/voyage/cambodge.webp' },
-            'Cambodge': { name: 'Cambodge', image: 'images/voyage/cambodge.webp' },
-            'Vietnam': { name: 'Vietnam', image: 'images/voyage/vietnam.webp' },
-            'VIETNAM': { name: 'Vietnam', image: 'images/voyage/vietnam.webp' },
-            'Indonesia': { name: 'Indonésie', image: 'images/voyage/indonesie.webp' },
-            'Indonésie': { name: 'Indonésie', image: 'images/voyage/indonesie.webp' },
-            'Singapore': { name: 'Singapour', image: 'images/voyage/singapour.webp' },
-            'Singapour': { name: 'Singapour', image: 'images/voyage/singapour.webp' },
-            'Australia': { name: 'Australie', image: 'images/voyage/australie.webp' },
-            'Australie': { name: 'Australie', image: 'images/voyage/australie.webp' },
-            'New Zealand': { name: 'Nouvelle-Zélande', image: 'images/voyage/nouvelle-zelande.webp' },
-            'Nouvelle-Zélande': { name: 'Nouvelle-Zélande', image: 'images/voyage/nouvelle-zelande.webp' },
-            'Peru': { name: 'Pérou', image: 'images/voyage/perou.webp' },
-            'Pérou': { name: 'Pérou', image: 'images/voyage/perou.webp' },
-            'Colombia': { name: 'Colombie', image: 'images/voyage/colombie.webp' },
-            'Colombie': { name: 'Colombie', image: 'images/voyage/colombie.webp' },
-            'Bolivia': { name: 'Bolivie', image: 'images/voyage/bolivie.webp' },
-            'Bolivie': { name: 'Bolivie', image: 'images/voyage/bolivie.webp' }
-        };
-        
-        // Fonction pour normaliser le nom d'un pays (pour gérer les variations comme "Republic of Singapore")
-        function normalizeCountryName(countryName) {
-            if (!countryName) return countryName;
-            const normalized = countryName.toLowerCase();
-            
-            // Normaliser Singapour
-            if (normalized.includes('singapore') || normalized.includes('singapour')) {
-                return 'Singapore';
-            }
-            
-            return countryName;
-        }
-        
-        // Fonction pour obtenir les données d'un pays
-        function getCountryData(countryName) {
-            if (!countryName) return null;
-            
-            // Normaliser d'abord
-            const normalized = normalizeCountryName(countryName);
-            
-            return countryData[normalized] || countryData[countryName] || countryData[Object.keys(countryData).find(key => 
-                key.toLowerCase() === countryName.toLowerCase() || 
-                countryName.toLowerCase().includes(key.toLowerCase()) ||
-                key.toLowerCase().includes(countryName.toLowerCase())
-            )] || null;
-        }
-        
-        // Fonction pour obtenir la position du label d'un pays
-        function getCountryLabelPosition(countryName) {
-            const svg = document.getElementById('worldMapSVG');
-            if (!svg) return { horizontal: 'right', vertical: 'center' };
-            
-            const labelGroup = svg.querySelector(`.country-label-group[data-country="${countryName}"]`);
-            if (!labelGroup) {
-                // Si le label n'existe pas, chercher dans countryLabelPositions
-                const countryLabelPositions = {
-                    'India': { horizontal: 'left', vertical: 'center' },
-                    'Inde': { horizontal: 'left', vertical: 'center' },
-                    'Nepal': { horizontal: 'right', vertical: 'center' },
-                    'Népal': { horizontal: 'right', vertical: 'center' },
-                    'Thailand': { horizontal: 'left', vertical: 'bottom' },
-                    'Thaïlande': { horizontal: 'left', vertical: 'bottom' },
-                    'Laos': { horizontal: 'right', vertical: 'center' },
-                    'Cambodia': { horizontal: 'right', vertical: 'center' },
-                    'Cambodge': { horizontal: 'right', vertical: 'center' },
-                    'Vietnam': { horizontal: 'right', vertical: 'top' },
-                    'Indonesia': { horizontal: 'left', vertical: 'bottom' },
-                    'Indonésie': { horizontal: 'left', vertical: 'bottom' },
-                    'Singapore': { horizontal: 'right', vertical: 'center' },
-                    'Singapour': { horizontal: 'right', vertical: 'center' },
-                    'Australia': { horizontal: 'left', vertical: 'center' },
-                    'Australie': { horizontal: 'left', vertical: 'center' },
-                    'New Zealand': { horizontal: 'left', vertical: 'bottom' },
-                    'Nouvelle-Zélande': { horizontal: 'left', vertical: 'bottom' },
-                    'Peru': { horizontal: 'left', vertical: 'center' },
-                    'Pérou': { horizontal: 'left', vertical: 'center' },
-                    'Colombia': { horizontal: 'right', vertical: 'center' },
-                    'Colombie': { horizontal: 'right', vertical: 'center' },
-                    'Bolivia': { horizontal: 'right', vertical: 'center' },
-                    'Bolivie': { horizontal: 'right', vertical: 'center' }
-                };
-                return countryLabelPositions[countryName] || { horizontal: 'right', vertical: 'center' };
-            }
-            
-            return {
-                horizontal: labelGroup.getAttribute('data-position-horizontal') || 'right',
-                vertical: labelGroup.getAttribute('data-position-vertical') || 'center'
-            };
-        }
-        
-        // Fonction pour afficher le tooltip
-        function showCountryTooltip(event, countryName) {
-            const data = getCountryData(countryName);
-            if (!data) {
-                return;
-            }
-            
-            // Détecter si on est en mobile (exclure les tablettes/iPad)
-            const isMobile = window.innerWidth <= 480;
-            
-            if (isMobile) {
-                // Mobile : afficher en dessous de la carte
-                const tooltipMobile = document.getElementById('countryTooltipMobile');
-                const tooltipImage = tooltipMobile.querySelector('.tooltip-image');
-                const tooltipName = tooltipMobile.querySelector('.tooltip-name');
-                
-                tooltipImage.src = data.image;
-                tooltipImage.alt = data.name;
-                tooltipName.textContent = data.name;
-                
-                tooltipMobile.classList.add('visible');
-                
-                // Scroll vers le tooltip pour qu'il soit visible
-                setTimeout(() => {
-                    tooltipMobile.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 100);
-            } else {
-                // Desktop : afficher le tooltip classique
-            const tooltip = document.getElementById('countryTooltip');
-                if (!tooltip) {
-                    return;
-                }
-            const tooltipImage = tooltip.querySelector('.tooltip-image');
-            const tooltipName = tooltip.querySelector('.tooltip-name');
-                if (!tooltipImage || !tooltipName) {
-                    return;
-                }
-            
-            tooltipImage.src = data.image;
-            tooltipImage.alt = data.name;
-            tooltipName.textContent = data.name;
-                
-                const fallbackWidth = 200;
-                const fallbackHeight = 150;
-                const measuredWidth = tooltip.offsetWidth || fallbackWidth;
-                const measuredHeight = tooltip.offsetHeight || fallbackHeight;
-                const tooltipWidth = Math.max(fallbackWidth, measuredWidth);
-                const tooltipHeight = Math.max(fallbackHeight, measuredHeight);
-                const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
-            
-            // Positionner le tooltip (relatif au wrapper)
-            const wrapper = document.querySelector('.worldmap-wrapper');
-                if (!wrapper) return;
-            const wrapperRect = wrapper.getBoundingClientRect();
-                // Gérer les événements tactiles et souris
-                const clientX = event.clientX || (event.touches && event.touches[0]?.clientX) || (event.changedTouches && event.changedTouches[0]?.clientX) || wrapperRect.width / 2;
-                const clientY = event.clientY || (event.touches && event.touches[0]?.clientY) || (event.changedTouches && event.changedTouches[0]?.clientY) || wrapperRect.height / 2;
-                const mouseX = clientX - wrapperRect.left;
-                const mouseY = clientY - wrapperRect.top;
-            
-            // Calculer la position du tooltip selon la position du label
-            let offsetX = 20;
-            let offsetY = -20;
-            
-            // Exception spéciale pour la Nouvelle-Zélande : toujours en haut à gauche
-            const isNewZealand = countryName.toLowerCase().includes('new zealand') || 
-                                countryName.toLowerCase().includes('nouvelle-zélande') ||
-                                countryName.toLowerCase().includes('nouvelle zélande');
-            
-            if (isNewZealand) {
-                offsetX = -tooltipWidth - 20; // À gauche
-                offsetY = -tooltipHeight - 30; // Au-dessus
-            } else {
-                // Obtenir la position du label pour positionner le tooltip du même côté
-                const labelPosition = getCountryLabelPosition(countryName);
-                
-                if (labelPosition.horizontal === 'left') {
-                    offsetX = -tooltipWidth - 20; // À gauche du curseur
-                } else if (labelPosition.horizontal === 'right') {
-                    offsetX = 20; // À droite du curseur
-                } else {
-                    offsetX = -tooltipWidth / 2; // Centré horizontalement
-                }
-                
-                if (labelPosition.vertical === 'top') {
-                    offsetY = -tooltipHeight - 30; // Au-dessus du curseur
-                } else if (labelPosition.vertical === 'bottom') {
-                    offsetY = 20; // En-dessous du curseur
-                } else {
-                    offsetY = -tooltipHeight / 2; // Centré verticalement
-                }
-            }
-            
-                tooltip.style.position = 'absolute';
-                const maxLeft = wrapperRect.width - tooltipWidth - 8;
-                const maxTop = wrapperRect.height - tooltipHeight - 8;
-                // Si les coordonnées ne sont pas valides, centrer le tooltip
-                const finalX = (mouseX > 0 && mouseX < wrapperRect.width) ? mouseX : wrapperRect.width / 2;
-                const finalY = (mouseY > 0 && mouseY < wrapperRect.height) ? mouseY : wrapperRect.height / 2;
-                const clampedLeft = clamp(finalX + offsetX, 8, maxLeft);
-                const clampedTop = clamp(finalY + offsetY, 8, maxTop);
-                tooltip.style.left = `${clampedLeft}px`;
-                tooltip.style.top = `${clampedTop}px`;
-                tooltip.style.transform = 'none';
-                tooltip.style.display = 'block';
-                tooltip.style.visibility = 'visible';
-                tooltip.style.opacity = '1';
-                
-            tooltip.classList.add('visible');
-            }
-        }
-        
-        // Fonction pour cacher le tooltip
-        function hideCountryTooltip() {
-            const isMobile = window.innerWidth <= 480;
-            if (isMobile) {
-                const tooltipMobile = document.getElementById('countryTooltipMobile');
-                tooltipMobile.classList.remove('visible');
-            } else {
-            const tooltip = document.getElementById('countryTooltip');
-                if (tooltip) {
-            tooltip.classList.remove('visible');
-                    // Cacher complètement le tooltip en réinitialisant les styles inline
-                    tooltip.style.display = 'none';
-                    tooltip.style.visibility = 'hidden';
-                    tooltip.style.opacity = '0';
-                }
-            }
-        }
-        
-        // Fonction pour ajouter les labels et traits aux pays visités
-        function addCountryLabels(svg, path, countries, projection) {
-            const visitedCountries = countries.filter(d => {
-                let countryName = d.properties?.NAME || d.properties?.NAME_LONG || d.properties?.name || '';
-                countryName = normalizeCountryName(countryName) || countryName;
-                return isCountryVisited(countryName);
-            });
-            
-            // Mapping spécifique pour certains pays avec positions détaillées
-            // Format: { horizontal: 'left'|'right'|'center', vertical: 'top'|'bottom'|'center' }
-            const countryLabelPositions = {
-                'India': { horizontal: 'left', vertical: 'center' },
-                'Inde': { horizontal: 'left', vertical: 'center' },
-                'Nepal': { horizontal: 'right', vertical: 'center' },
-                'Népal': { horizontal: 'right', vertical: 'center' },
-                'Thailand': { horizontal: 'left', vertical: 'bottom' },
-                'Thaïlande': { horizontal: 'left', vertical: 'bottom' },
-                'Laos': { horizontal: 'right', vertical: 'center' },
-                'Cambodia': { horizontal: 'right', vertical: 'center' },
-                'Cambodge': { horizontal: 'right', vertical: 'center' },
-                'Vietnam': { horizontal: 'right', vertical: 'top' },
-                'Indonesia': { horizontal: 'left', vertical: 'bottom' },
-                'Indonésie': { horizontal: 'left', vertical: 'bottom' },
-                'Singapore': { horizontal: 'right', vertical: 'center' },
-                'Singapour': { horizontal: 'right', vertical: 'center' },
-                'Australia': { horizontal: 'left', vertical: 'center' },
-                'Australie': { horizontal: 'left', vertical: 'center' },
-                'New Zealand': { horizontal: 'left', vertical: 'bottom' },
-                'Nouvelle-Zélande': { horizontal: 'left', vertical: 'bottom' },
-                'Peru': { horizontal: 'left', vertical: 'center' },
-                'Pérou': { horizontal: 'left', vertical: 'center' },
-                'Colombia': { horizontal: 'right', vertical: 'center' },
-                'Colombie': { horizontal: 'right', vertical: 'center' },
-                'Bolivia': { horizontal: 'right', vertical: 'center' },
-                'Bolivie': { horizontal: 'right', vertical: 'center' }
-            };
-            
-            // Stocker les positions pour détecter les collisions
-            const existingLabels = [];
-            
-            // Ajouter Singapour manuellement car il peut être trop petit pour être détecté dans les données
-            const singaporeInfo = getCountryData('Singapore');
-            if (singaporeInfo && projection) {
-                // Singapour: latitude ~1.35°N, longitude ~103.8°E (juste sous la Malaisie)
-                const singaporeCoords = projection([103.8, 1.35]);
-                if (singaporeCoords && !isNaN(singaporeCoords[0]) && !isNaN(singaporeCoords[1])) {
-                    const countryName = 'Singapore';
-                    const position = countryLabelPositions[countryName] || { horizontal: 'right', vertical: 'center' };
-                    
-                    // Calculer les offsets selon la position
-                    let offsetX = 100; // right par défaut (ligne plus longue)
-                    let offsetY = 0; // center par défaut
-                    
-                    const labelX = singaporeCoords[0] + offsetX;
-                    const labelY = singaporeCoords[1] + offsetY;
-                    
-                    // Enregistrer cette position
-                    existingLabels.push({ x: labelX, y: labelY, name: singaporeInfo.name });
-                    
-                    // Créer un groupe pour le label et la ligne
-                    const labelGroup = svg.append('g')
-                        .attr('class', 'country-label-group')
-                        .attr('data-country', countryName)
-                        .attr('data-position-horizontal', position.horizontal)
-                        .attr('data-position-vertical', position.vertical)
-                        .style('cursor', 'pointer');
-                    
-                    // Dessiner la ligne de connexion
-                    labelGroup.append('line')
-                        .attr('class', 'country-label-line')
-                        .attr('x1', singaporeCoords[0])
-                        .attr('y1', singaporeCoords[1])
-                        .attr('x2', labelX)
-                        .attr('y2', labelY)
-                        .attr('stroke', 'var(--color-accent)')
-                        .attr('stroke-width', 1.5)
-                        .attr('opacity', 0.7);
-                    
-                    // Ajouter le texte du nom du pays
-                    labelGroup.append('text')
-                        .attr('class', 'country-label-text')
-                        .attr('x', labelX)
-                        .attr('y', labelY)
-                        .attr('text-anchor', 'start')
-                        .attr('fill', 'var(--color-accent)')
-                        .attr('font-family', 'var(--font-primary)')
-                        .attr('font-size', '13px')
-                        .attr('font-weight', '600')
-                        .text(singaporeInfo.name);
-                    
-                    // Ajouter les event listeners sur le label pour afficher le tooltip
-                    labelGroup.on('mouseenter', function(event) {
-                        showCountryTooltip(event, countryName);
-                    })
-                    .on('mousemove', function(event) {
-                        const wrapper = document.querySelector('.worldmap-wrapper');
-                        const wrapperRect = wrapper.getBoundingClientRect();
-                        const mouseX = event.clientX - wrapperRect.left;
-                        const mouseY = event.clientY - wrapperRect.top;
-                        const tooltip = document.getElementById('countryTooltip');
-                        
-                        let offsetX = 20;
-                        let offsetY = -20;
-                        const tooltipWidth = 200;
-                        const tooltipHeight = 150;
-                        const labelPosition = getCountryLabelPosition(countryName);
-                        
-                        if (labelPosition.horizontal === 'left') {
-                            offsetX = -tooltipWidth - 20;
-                        } else if (labelPosition.horizontal === 'right') {
-                            offsetX = 20;
-                        } else {
-                            offsetX = -tooltipWidth / 2;
-                        }
-                        
-                        if (labelPosition.vertical === 'top') {
-                            offsetY = -tooltipHeight - 30;
-                        } else if (labelPosition.vertical === 'bottom') {
-                            offsetY = 20;
-                        } else {
-                            offsetY = -tooltipHeight / 2;
-                        }
-                        
-                        tooltip.style.left = `${mouseX + offsetX}px`;
-                        tooltip.style.top = `${mouseY + offsetY}px`;
-                    })
-                    .on('mouseleave', function(event) {
-                        hideCountryTooltip();
-                    })
-                    .on('click', function(event) {
-                        event.stopPropagation();
-                        showCountryTooltip(event, countryName);
-                    });
-                }
-            }
-            
-            visitedCountries.forEach(d => {
-                let countryName = d.properties?.NAME || d.properties?.NAME_LONG || d.properties?.name || '';
-                
-                // Normaliser le nom pour Singapour (peut être "Republic of Singapore" dans les données)
-                if (countryName.toLowerCase().includes('singapore') || countryName.toLowerCase().includes('singapour')) {
-                    // Essayer avec "Singapore" d'abord
-                    const testInfo = getCountryData('Singapore');
-                    if (testInfo) {
-                        countryName = 'Singapore'; // Normaliser pour le reste du code
-                    } else {
-                        const testInfo2 = getCountryData('Singapour');
-                        if (testInfo2) {
-                            countryName = 'Singapour'; // Normaliser pour le reste du code
-                        }
-                    }
-                }
-                
-                const countryInfo = getCountryData(countryName);
-                if (!countryInfo) return;
-                
-                // Pour Singapour, forcer l'ajout du label même si le centroid pourrait être problématique
-                const isSingapore = countryName.toLowerCase().includes('singapore') || countryName.toLowerCase().includes('singapour');
-                
-                // Calculer le centre du pays (centroid)
-                let centroid = path.centroid(d);
-                
-                // Pour Singapour, toujours utiliser des coordonnées géographiques fixes
-                // Singapour: latitude ~1.35°N, longitude ~103.8°E
-                if (isSingapore) {
-                    if (projection) {
-                        const singaporeCoords = projection([103.8, 1.35]);
-                        if (singaporeCoords && !isNaN(singaporeCoords[0]) && !isNaN(singaporeCoords[1])) {
-                            centroid = singaporeCoords;
-                        } else if (isNaN(centroid[0]) || isNaN(centroid[1])) {
-                            // Si les coordonnées fixes ne fonctionnent pas, utiliser une position approximative
-                            // basée sur la position de Singapour sur une carte Mercator
-                            return; // Ignorer si on ne peut pas obtenir de coordonnées valides
-                        }
-                        // Si le centroid calculé est valide, on peut l'utiliser, sinon on utilise les coordonnées fixes
-                    } else if (isNaN(centroid[0]) || isNaN(centroid[1])) {
-                        return; // Pas de projection disponible et centroid invalide
-                    }
-                } else if (isNaN(centroid[0]) || isNaN(centroid[1])) {
-                    return; // Ignorer si centroid invalide pour les autres pays
-                }
-                
-                // Obtenir la position spécifique ou utiliser les valeurs par défaut
-                const position = countryLabelPositions[countryName] || { horizontal: 'right', vertical: 'center' };
-                
-                // Calculer les offsets selon la position
-                let offsetX = 0;
-                let offsetY = 0;
-                
-                if (position.horizontal === 'left') {
-                    offsetX = -60;
-                } else if (position.horizontal === 'right') {
-                    offsetX = 60;
-                } else {
-                    offsetX = 0; // center
-                }
-                
-                if (position.vertical === 'top') {
-                    offsetY = -35;
-                } else if (position.vertical === 'bottom') {
-                    offsetY = 35;
-                } else {
-                    offsetY = -15; // center (légèrement au-dessus)
-                }
-                
-                const labelX = centroid[0] + offsetX;
-                const labelY = centroid[1] + offsetY;
-                
-                // Vérifier les collisions avec les labels existants
-                let finalOffsetX = offsetX;
-                let finalOffsetY = offsetY;
-                for (const existing of existingLabels) {
-                    const distanceX = Math.abs(labelX - existing.x);
-                    const distanceY = Math.abs(labelY - existing.y);
-                    // Si trop proche (moins de 80px horizontalement et 30px verticalement), ajuster
-                    if (distanceX < 80 && distanceY < 30) {
-                        // Ajuster légèrement pour éviter la collision
-                        if (position.horizontal === 'left') {
-                            finalOffsetX = -80;
-                        } else if (position.horizontal === 'right') {
-                            finalOffsetX = 80;
-                        }
-                        if (position.vertical === 'top') {
-                            finalOffsetY = -45;
-                        } else if (position.vertical === 'bottom') {
-                            finalOffsetY = 45;
-                        }
-                        break;
-                    }
-                }
-                
-                const finalLabelX = centroid[0] + finalOffsetX;
-                const finalLabelY = centroid[1] + finalOffsetY;
-                
-                // Enregistrer cette position
-                existingLabels.push({ x: finalLabelX, y: finalLabelY, name: countryInfo.name });
-                
-                // Déterminer l'ancrage du texte
-                let textAnchor = 'start';
-                if (position.horizontal === 'left') {
-                    textAnchor = 'end';
-                } else if (position.horizontal === 'right') {
-                    textAnchor = 'start';
-                } else {
-                    textAnchor = 'middle';
-                }
-                
-                // Créer un groupe pour le label et la ligne
-                const labelGroup = svg.append('g')
-                    .attr('class', 'country-label-group')
-                    .attr('data-country', countryName)
-                    .attr('data-position-horizontal', position.horizontal)
-                    .attr('data-position-vertical', position.vertical)
-                    .style('cursor', 'pointer');
-                
-                // Dessiner la ligne de connexion
-                labelGroup.append('line')
-                    .attr('class', 'country-label-line')
-                    .attr('x1', centroid[0])
-                    .attr('y1', centroid[1])
-                    .attr('x2', finalLabelX)
-                    .attr('y2', finalLabelY)
-                    .attr('stroke', 'var(--color-accent)')
-                    .attr('stroke-width', 1.5)
-                    .attr('opacity', 0.7);
-                
-                // Ajouter le texte du nom du pays
-                const labelText = labelGroup.append('text')
-                    .attr('class', 'country-label-text')
-                    .attr('x', finalLabelX)
-                    .attr('y', finalLabelY)
-                    .attr('text-anchor', textAnchor)
-                    .attr('fill', 'var(--color-accent)')
-                    .attr('font-family', 'var(--font-primary)')
-                    .attr('font-size', '13px')
-                    .attr('font-weight', '600')
-                    .text(countryInfo.name);
-                
-                // Ajouter les event listeners sur le label pour afficher le tooltip
-                labelGroup.on('mouseenter', function(event) {
-                    showCountryTooltip(event, countryName);
-                })
-                .on('mousemove', function(event) {
-                    const wrapper = document.querySelector('.worldmap-wrapper');
-                    const wrapperRect = wrapper.getBoundingClientRect();
-                    const mouseX = event.clientX - wrapperRect.left;
-                    const mouseY = event.clientY - wrapperRect.top;
-                    const tooltip = document.getElementById('countryTooltip');
-                    
-                    // Calculer la position du tooltip selon la position du label
-                    let offsetX = 20;
-                    let offsetY = -20;
-                    const tooltipWidth = 200;
-                    const tooltipHeight = 150;
-                    
-                    // Exception spéciale pour la Nouvelle-Zélande : toujours en haut à gauche
-                    const isNewZealand = countryName.toLowerCase().includes('new zealand') || 
-                                        countryName.toLowerCase().includes('nouvelle-zélande') ||
-                                        countryName.toLowerCase().includes('nouvelle zélande');
-                    
-                    if (isNewZealand) {
-                        offsetX = -tooltipWidth - 20; // À gauche
-                        offsetY = -tooltipHeight - 30; // Au-dessus
-                    } else {
-                        const labelPosition = getCountryLabelPosition(countryName);
-                        
-                        if (labelPosition.horizontal === 'left') {
-                            offsetX = -tooltipWidth - 20;
-                        } else if (labelPosition.horizontal === 'right') {
-                            offsetX = 20;
-                        } else {
-                            offsetX = -tooltipWidth / 2;
-                        }
-                        
-                        if (labelPosition.vertical === 'top') {
-                            offsetY = -tooltipHeight - 30;
-                        } else if (labelPosition.vertical === 'bottom') {
-                            offsetY = 20;
-                        } else {
-                            offsetY = -tooltipHeight / 2;
-                        }
-                    }
-                    
-                    tooltip.style.left = `${mouseX + offsetX}px`;
-                    tooltip.style.top = `${mouseY + offsetY}px`;
-                })
-                .on('mouseleave', function(event) {
-                    hideCountryTooltip();
-                })
-                .on('click', function(event) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                    showCountryTooltip(event, countryName);
-                })
-                .on('touchend', function(event) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                    // Créer un événement synthétique avec les coordonnées du touch
-                    const touch = event.changedTouches[0] || event.touches[0];
-                    if (touch) {
-                        const syntheticEvent = {
-                            clientX: touch.clientX,
-                            clientY: touch.clientY,
-                            preventDefault: () => {},
-                            stopPropagation: () => {}
-                        };
-                        showCountryTooltip(syntheticEvent, countryName);
-                    }
-                });
-            });
-        }
-        
-        // Fonction pour vérifier si un pays est visité (correspondance exacte stricte)
-        function isCountryVisited(countryName) {
-            if (!countryName) return false;
-            
-            const normalizedName = countryName.toLowerCase().trim();
-            
-            // Correspondance exacte uniquement pour éviter les faux positifs (comme les pays européens)
-            // Vérifie aussi les variantes comme "New Zealand" dans les données qui pourraient être "NewZealand"
-            // Pour Singapour, accepter aussi les noms contenant "singapore" (comme "Republic of Singapore")
-            return visitedCountryNamesStrict.some(visitedName => {
-                const normalizedVisited = visitedName.toLowerCase().trim();
-                // Correspondance exacte
-                if (normalizedName === normalizedVisited || 
-                    normalizedName.replace(/\s+/g, '') === normalizedVisited.replace(/\s+/g, '')) {
-                    return true;
-                }
-                // Pour certains petits pays comme Singapour, vérifier aussi si le nom contient le pays visité
-                if (normalizedVisited === 'singapore' || normalizedVisited === 'singapour' || normalizedVisited === 'sgp') {
-                    if (normalizedName.includes('singapore') || normalizedName.includes('singapour')) {
-                        return true;
-                    }
-                }
-                return false;
-            });
-        }
-        
-        // Fonction pour filtrer l'Antarctique et les îles très au sud
-        function filterAntarctica(feature) {
-            if (!feature || !feature.geometry) return false;
-            const countryName = feature.properties?.NAME || feature.properties?.name || '';
-            
-            // Exclure explicitement l'Antarctique
-            if (countryName.toLowerCase().includes('antarctica') || 
-                countryName.toLowerCase().includes('antarctique')) {
-                return false;
-            }
-            
-            // Filtrer les pays avec des latitudes trop basses (sous -60°)
-            // Calculer la bounding box du pays
-            if (feature.geometry.type === 'Polygon') {
-                const coords = feature.geometry.coordinates[0];
-                const maxLat = Math.max(...coords.map(c => c[1]));
-                if (maxLat < -60) return false; // Exclure si la latitude max est sous -60°
-            } else if (feature.geometry.type === 'MultiPolygon') {
-                let maxLat = -90;
-                feature.geometry.coordinates.forEach(polygon => {
-                    const coords = polygon[0];
-                    const polyMaxLat = Math.max(...coords.map(c => c[1]));
-                    if (polyMaxLat > maxLat) maxLat = polyMaxLat;
-                });
-                if (maxLat < -60) return false; // Exclure si la latitude max est sous -60°
-            }
-            
-            return true;
-        }
-        
-        // Charger la carte du monde depuis un service externe
-        async function loadWorldMap() {
-            const svg = d3.select('#worldMapSVG');
-            const width = 1200;
-            const height = 480;
-            
-            // Projection de Mercator avec ajustement pour afficher tout le haut
-            // Mercator préserve les angles mais déforme les surfaces près des pôles
-            // Réduire le scale pour que tout le haut soit visible
-            const baseScale = width / (2 * Math.PI);
-            const zoomFactor = 0.85; // Zoom réduit pour voir tout le haut
-            
-            const projection = d3.geoMercator()
-                .scale(baseScale * zoomFactor)
-                .translate([width / 2, height / 2 + 50]) // Translation vers le bas pour voir le haut
-                .clipExtent([[0, 0], [width, height]]);
-            
-            // Mercator affiche de -85° à +85° de latitude (exclut automatiquement les pôles)
-            // Le zoom réduit et la translation permettent d'avoir tout le haut visible
-            
-            const path = d3.geoPath()
-                .projection(projection)
-                .pointRadius(2);
-            
-            try {
-                // Essayer de charger depuis world-atlas (version 110m pour plus de détails)
-                const worldData = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-                const countries = topojson.feature(worldData, worldData.objects.countries);
-                
-                // Filtrer l'Antarctique
-                const filteredCountries = countries.features.filter(filterAntarctica);
-                
-                // Dessiner tous les pays (sans l'Antarctique)
-                svg.selectAll('.country')
-                    .data(filteredCountries)
-                    .enter()
-                    .append('path')
-                    .attr('class', d => {
-                        let countryName = d.properties?.NAME || d.properties?.name || '';
-                        countryName = normalizeCountryName(countryName) || countryName;
-                        return isCountryVisited(countryName) ? 'country country-visited' : 'country';
-                    })
-                    .attr('d', path)
-                    .attr('data-country', d => {
-                        let countryName = d.properties?.NAME || d.properties?.name || '';
-                        return normalizeCountryName(countryName) || countryName;
-                    })
-                    .on('mouseenter', function(event, d) {
-                        let countryName = d.properties?.NAME || d.properties?.name || '';
-                        countryName = normalizeCountryName(countryName) || countryName;
-                        d3.select(this).attr('data-hover', 'true');
-                        if (isCountryVisited(countryName)) {
-                            showCountryTooltip(event, countryName);
-                        }
-                    })
-                    .on('mousemove', function(event, d) {
-                        let countryName = d.properties?.NAME || d.properties?.name || '';
-                        countryName = normalizeCountryName(countryName) || countryName;
-                        if (isCountryVisited(countryName)) {
-                            const wrapper = document.querySelector('.worldmap-wrapper');
-                            const wrapperRect = wrapper.getBoundingClientRect();
-                            const mouseX = event.clientX - wrapperRect.left;
-                            const mouseY = event.clientY - wrapperRect.top;
-                            const tooltip = document.getElementById('countryTooltip');
-                            
-                            // Calculer la position du tooltip selon la position du label
-                            let offsetX = 20;
-                            let offsetY = -20;
-                            const tooltipWidth = 200;
-                            const tooltipHeight = 150;
-                            
-                            // Exception spéciale pour la Nouvelle-Zélande : toujours en haut à gauche
-                            const isNewZealand = countryName.toLowerCase().includes('new zealand') || 
-                                                countryName.toLowerCase().includes('nouvelle-zélande') ||
-                                                countryName.toLowerCase().includes('nouvelle zélande');
-                            
-                            if (isNewZealand) {
-                                offsetX = -tooltipWidth - 20; // À gauche
-                                offsetY = -tooltipHeight - 30; // Au-dessus
-                            } else {
-                                const labelPosition = getCountryLabelPosition(countryName);
-                                
-                                if (labelPosition.horizontal === 'left') {
-                                    offsetX = -tooltipWidth - 20;
-                                } else if (labelPosition.horizontal === 'right') {
-                                    offsetX = 20;
-                                } else {
-                                    offsetX = -tooltipWidth / 2;
-                                }
-                                
-                                if (labelPosition.vertical === 'top') {
-                                    offsetY = -tooltipHeight - 30;
-                                } else if (labelPosition.vertical === 'bottom') {
-                                    offsetY = 20;
-                                } else {
-                                    offsetY = -tooltipHeight / 2;
-                                }
-                            }
-                            
-                            tooltip.style.left = `${mouseX + offsetX}px`;
-                            tooltip.style.top = `${mouseY + offsetY}px`;
-                        }
-                    })
-                    .on('mouseleave', function(event, d) {
-                        d3.select(this).attr('data-hover', null);
-                        hideCountryTooltip();
-                    });
-                
-                // Ajouter les labels et traits pour les pays visités
-                addCountryLabels(svg, path, filteredCountries, projection);
-                    
-            } catch (error) {
-                console.error('Erreur lors du chargement de la carte:', error);
-            }
-        }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            loadWorldMap();
-            
-            // Event listener pour le bouton de fermeture
-            const closeButton = document.querySelector('.tooltip-close');
-            if (closeButton) {
-                closeButton.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    hideCountryTooltip();
-                });
-            }
-            
-            // Fermer le tooltip quand on clique sur l'overlay (mobile)
-            document.addEventListener('click', function(event) {
-                const tooltip = document.getElementById('countryTooltip');
-                const isClickOnTooltip = tooltip && (tooltip.contains(event.target) || event.target.closest('.tooltip-close'));
-                const isClickOnCountry = event.target.closest('.country, .country-label-group');
-                const isClickOnClose = event.target.closest('.tooltip-close');
-                
-                if (isClickOnClose) {
-                    hideCountryTooltip();
-                } else if (!isClickOnTooltip && !isClickOnCountry && tooltip && tooltip.classList.contains('visible')) {
-                    // En mobile, fermer aussi en cliquant sur l'overlay
-                    const isMobile = window.innerWidth <= 480;
-                    if (isMobile) {
-                        hideCountryTooltip();
-                    }
-                }
-            });
-        });
-    </script>
-    
-    <!-- Tarteaucitron.js -->
+    <!-- Carte du monde (voyage) -->
+    <script src="globe.js?v=53" defer></script>
+    <script src="cloudscape.js?v=54" defer></script>
+
+    <!-- Tarteaucitron.js (consentement cookies) -->
     <script src="tarteaucitron.js-master/tarteaucitron.min.js"></script>
     <script type="text/javascript">
     tarteaucitron.init({
-      "privacyUrl": "",
+      "privacyUrl": "/mentions-legales.html",
       "hashtag": "#tarteaucitron",
       "cookieName": "tarteaucitron",
       "orientation": "bottom",
