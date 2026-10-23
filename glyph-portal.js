@@ -224,11 +224,16 @@
     motion.addEventListener('change', resize);
 
     // Police custom : mesurer avec une solution de repli, puis re-mesurer une fois prête.
+    // check() peut répondre "prête" à tort au 2e chargement (cache) : on re-mesure toujours une fois la police réellement chargée.
     try { fontReady = document.fonts.check(`${weight} 100px ${fontFamily}`); } catch (e) { fontReady = true; }
-    if (!fontReady && document.fonts) {
-        document.fonts.load(`${weight} 100px ${fontFamily}`).catch(() => {});
-        document.fonts.ready.then(() => { fontReady = true; fontDirty = true; dirty = true; schedule(); });
-        window.setTimeout(() => { fontReady = true; fontDirty = true; dirty = true; schedule(); }, 1600);
+    const remeasure = () => { fontReady = true; fontDirty = true; dirty = true; schedule(); };
+    if (document.fonts) {
+        document.fonts.load(`${weight} 100px ${fontFamily}`).then(remeasure, () => {});
+        document.fonts.ready.then(remeasure);
+        document.fonts.addEventListener('loadingdone', remeasure);
+        window.addEventListener('load', remeasure);
+        window.addEventListener('pageshow', (e) => { if (e.persisted) remeasure(); });
+        if (!fontReady) window.setTimeout(remeasure, 1600);
     }
 
     frame();
