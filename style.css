@@ -181,7 +181,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{
 .about-travel-stats .stat .l{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
 /* Contact */
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.contact-social{display:inline-flex;margin-top:2rem;color:#fff;filter:drop-shadow(0 1px 3px rgba(9,48,35,.55));transition:transform .2s}
+.contact-social svg{display:block;width:2.25rem;height:2.25rem;fill:currentColor}
+.contact-social:hover{transform:translateY(-3px)}
+.contact-social:focus-visible{outline:2px solid #fff;outline-offset:6px;border-radius:4px}
 .contact-item{
   display:flex;flex-direction:column;gap:.4rem;
   padding:1.4rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);
@@ -197,7 +201,7 @@ footer{padding:2.5rem 0;border-top:1px solid var(--line);color:var(--muted);font
 .preview-hint{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);margin-bottom:1.2rem}
 .preview-duo{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 .site-preview{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg-soft)}
-.preview-label{position:absolute;top:.7rem;left:.7rem;z-index:3;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;background:rgba(11,13,12,.85);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.preview-label{position:absolute;top:.7rem;left:.7rem;z-index:3;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;background:rgba(11,13,12,.85);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.4)}
 .preview-label--after{background:var(--accent);color:#fff}
 .preview-frame{height:360px;overflow:hidden}
 .preview-frame img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:object-position 6s linear}

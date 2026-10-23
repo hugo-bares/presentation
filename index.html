@@ -28,7 +28,6 @@
       "jobTitle": "Chef de projet web & marketing",
       "url": "https://hugobares.fr",
       "email": "hugobares@orange.fr",
-      "telephone": "+33609513303",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Versailles",
@@ -41,7 +40,7 @@
     </script>
     <link rel="preload" href="fonts/Gantari-latin.woff2?v=67" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Bodom.woff2?v=66" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="style.css?v=99">
+    <link rel="stylesheet" href="style.css?v=101">
     <link rel="stylesheet" href="tarteaucitron.js-master/css/tarteaucitron.min.css">
 </head>
 <body id="top">
@@ -412,19 +411,14 @@
                         <span class="contact-label">Email</span>
                         <span class="contact-value" id="contactEmailValue">chargement…</span>
                     </a>
-                    <a href="#" class="contact-item" id="contactPhone">
-                        <span class="contact-label">Téléphone</span>
-                        <span class="contact-value" id="contactPhoneValue">chargement…</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/hugobares" target="_blank" rel="noopener noreferrer" class="contact-item">
-                        <span class="contact-label">LinkedIn</span>
-                        <span class="contact-value">/in/hugobares</span>
-                    </a>
                     <a href="CV_Hugo_Bares.pdf" download="CV_Hugo_Bares.pdf" class="contact-item">
                         <span class="contact-label">CV</span>
                         <span class="contact-value">Télécharger (PDF)</span>
                     </a>
                 </div>
+                <a href="https://www.linkedin.com/in/hugobares" target="_blank" rel="noopener noreferrer" class="contact-social" aria-label="LinkedIn (s'ouvre dans un nouvel onglet)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
                 <footer class="contact-footer">
                     <p>&copy; 2026 Hugo Barès — Tous droits réservés</p>
                     <p class="footer-links"><a href="mentions-legales.html">Mentions légales</a></p>
@@ -445,16 +439,12 @@
     <script src="script.js?v=65" defer></script>
     <script src="glyph-portal.js?v=53" defer></script>
     <script>
-    // Obfuscation email / téléphone (anti-spam)
+    // Obfuscation email (anti-spam)
     (function () {
         var email = 'hugobares' + '@' + 'orange.fr';
         var el = document.getElementById('contactEmail');
         var val = document.getElementById('contactEmailValue');
         if (el && val) { el.href = 'mailto:' + email; val.textContent = email; }
-        var t = ['+33', '6', '09', '51', '33', '03'].join(' ');
-        var ph = document.getElementById('contactPhone');
-        var phVal = document.getElementById('contactPhoneValue');
-        if (ph && phVal) { ph.href = 'tel:+33609513303'; phVal.textContent = t; }
     })();
     </script>
 

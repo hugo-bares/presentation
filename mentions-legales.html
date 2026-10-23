@@ -6,7 +6,7 @@
     <title>Mentions légales | Hugo Barès</title>
     <meta name="description" content="Mentions légales du site de Hugo Barès, chef de projet web & marketing.">
     <link rel="icon" type="image/webp" href="images/favicon.webp?v=51">
-    <link rel="stylesheet" href="style.css?v=97">
+    <link rel="stylesheet" href="style.css?v=101">
     <style>
         .legal-wrap{max-width:820px;margin:0 auto;padding:clamp(3rem,7vw,6rem) 24px;line-height:1.75;color:var(--ink)}
         .legal-back{display:inline-flex;align-items:center;gap:.45rem;color:var(--accent);font-family:var(--font-mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2rem;text-decoration:none}
@@ -27,7 +27,7 @@
         <p>
             Hugo Barès<br>
             Chef de projet web &amp; marketing<br>
-            Contact : <a href="mailto:hugobares@orange.fr">hugobares@orange.fr</a>
+            Contact : <a href="#" data-email><noscript>adresse visible avec JavaScript activé</noscript></a>
         </p>
 
         <h2>Hébergement</h2>
@@ -44,17 +44,27 @@
 
         <h2>Données personnelles</h2>
         <p>
-            Les données collectées via le formulaire de contact ou les cookies soumis à consentement sont utilisées uniquement pour répondre aux demandes et mesurer l'audience (Google Analytics via Tarteaucitron). Vous pouvez retirer votre consentement à tout moment via le module de gestion des cookies.
+            Ce site ne comporte aucun formulaire et ne collecte aucune donnée directement. Les seules données traitées sont celles de la mesure d'audience (Google Analytics, Google LLC, États-Unis), collectées uniquement après votre consentement via Tarteaucitron. Si vous m'écrivez par e-mail, votre adresse et votre message ne servent qu'à vous répondre.
+        </p>
+        <p>
+            Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur vos données. Pour l'exercer, écrivez à l'adresse ci-dessous. Vous pouvez aussi introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.
         </p>
         <p>
             Responsable de traitement : Hugo Barès<br>
-            Email : <a href="mailto:hugobares@orange.fr">hugobares@orange.fr</a>
+            Email : <a href="#" data-email><noscript>adresse visible avec JavaScript activé</noscript></a>
         </p>
 
         <h2>Cookies</h2>
         <p>
-            La gestion des cookies est assurée par Tarteaucitron. Google Analytics (gtag) est déclenché uniquement après consentement. Vous pouvez gérer vos préférences à tout moment via le bandeau ou l'icône cookies.
+            La gestion des cookies est assurée par Tarteaucitron, qui conserve votre choix dans un cookie dédié. Google Analytics (gtag) n'est déclenché qu'après votre consentement et dépose des cookies de mesure d'audience (préfixe « _ga »). Vous pouvez modifier ou retirer votre consentement à tout moment via le bandeau ou l'icône cookies.
         </p>
     </main>
+    <script>
+    // Obfuscation email (anti-spam), identique à la page d'accueil
+    (function () {
+        var email = 'hugobares' + '@' + 'orange.fr';
+        document.querySelectorAll('[data-email]').forEach(function (a) { a.href = 'mailto:' + email; a.textContent = email; });
+    })();
+    </script>
 </body>
 </html>
