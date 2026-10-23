@@ -182,10 +182,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{
 
 /* Contact */
 .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-.contact-social{display:inline-flex;margin-top:2rem;color:#fff;filter:drop-shadow(0 1px 3px rgba(9,48,35,.55));transition:transform .2s}
+.contact-social{display:flex;width:fit-content;margin:2rem auto 0;color:#0a66c2;transition:transform .2s}
 .contact-social svg{display:block;width:2.25rem;height:2.25rem;fill:currentColor}
 .contact-social:hover{transform:translateY(-3px)}
-.contact-social:focus-visible{outline:2px solid #fff;outline-offset:6px;border-radius:4px}
+.contact-social:focus-visible{outline:2px solid #0a66c2;outline-offset:6px;border-radius:4px}
 .contact-item{
   display:flex;flex-direction:column;gap:.4rem;
   padding:1.4rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);
